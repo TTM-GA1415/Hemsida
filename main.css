@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+}
+header{
+    overflow: auto;
+    background-color: red;
+    height:200px;
+}
+nav{
+    background-color: blue;
+    height:200px;
+}
+section{
+    background-color: yellow;
+    height:200px;
+}
+footer{
+    background-color: green;
+    height:200px;
+}
+#wrapper{
+    margin: 0 auto;
+    width: 1080px;
+}
+.mitt{
+    margin: 0 auto;
+}
+.link{
+    background-color: purple;
+    width: 300px;
+    margin: 0 auto;
+}
+.link a{
+    margin-right: 20px;
+}
+#rUndantag{
+    margin-right: 0px;
+}
+.kategorier div{
+    background-color: turquoise;
+    width: 70px;
+    height: 50px;
+    outline: thin solid black;
+    float: left;
+    
+}
+.kategorier{
+    
+}
+#dam,#herr{
+    margin-right: 50px;
+}
+.kategorier a{
+    
+}
+.search{
+}
