@@ -64,6 +64,18 @@ footer{
     margin-right: 40px;
 }
 #sakerimitten{
-    margin-left: 26%;
+    /*margin-left: 26%;*/
+    padding-top: 40px;
+    float: left;
+    margin-left: 5%;
    
+}
+.searchbar{
+    margin-top: 64px;
+    margin-left: 100px;
+}
+.logo{
+    margin-left: 10px;
+    padding-top: 10px;
+    float: left;
 }

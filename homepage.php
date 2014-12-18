@@ -10,7 +10,11 @@
     <body>
         <div id="wrapper">
             <header>
-                <div class="logo"><img src="http://placehold.it/350x350"></div>
+                <div>
+                    <p>Telefonnummer: 112</p>
+                    
+                </div>
+                <div class="logo"><img src="http://placehold.it/200x50"></div>
                 <div id="sakerimitten">
                     <div class="link mitt">  
                         <a href="#">Fittlänk</a>
@@ -24,11 +28,11 @@
                         <a class="barn" href="#">BARN</a>
                     </div>
                 </div>    
-<!--                <div class="search mitt">
+                <div>
                     <form>
-                        <input type="text">
+                        <input class="searchbar" placeholder="Search" type="search">
                     </form>
-                </div>-->
+                </div>
             </header>
             <nav>
 
