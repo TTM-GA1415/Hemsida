@@ -76,6 +76,11 @@ footer{
 }
 .logo{
     margin-left: 10px;
-    padding-top: 10px;
+    padding-top: 36px;
     float: left;
+}
+.over-head{
+    width: 100%;
+    height: 50px;
+    border-bottom: thin solid black;
 }

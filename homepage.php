@@ -10,8 +10,7 @@
     <body>
         <div id="wrapper">
             <header>
-                <div>
-                    <p>Telefonnummer: 112</p>
+                <div class="over-head">
                     
                 </div>
                 <div class="logo"><img src="http://placehold.it/200x50"></div>
