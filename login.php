@@ -35,11 +35,14 @@ if (!isset($_SESSION["inloggad"])) {
             //Skapar sessionen "inloggad"
             $_SESSION["inloggad"] = array();
             //Sätter sessionens plats 0 till användarnamnet man loggat in med
-            $_SESSION["inloggad"][0] = $_GET["username"];
-            $_SESSION["inloggad"][1] = $_GET["password"];
+            $_SESSION["inloggad"][0] = $tmp_username;
+            $_SESSION["inloggad"][1] = $tmp_password;
             header("Location:?");
         }else{
             echo "Wrong username or password!";
         }
     }
+}
+if(isset($_SESSION["inloggad"])){
+    echo "Inloggad som " . $_SESSION["inloggad"][0];
 }
