@@ -1,16 +1,4 @@
 <?php
-echo "<form method='GET'>";
-echo "<input type='text' name='anv_namn'>";
-echo "<input type='password' name='pass'>";
-echo "<input type='submit' name='log_in' value='Logga in'>";
-echo "</form>";
-
-
-
-
-
-
-
 //definera databasuppgifter
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");
@@ -31,18 +19,43 @@ if (!isset($_SESSION["inloggad"])) {
         $users = $stmt->fetchAll();
         //Finns det något i $users skapas sessionen "inloggad"
         if (!empty($users)) {
-            echo "inloggning lyckades";
-            //Skapar sessionen "inloggad"
             $_SESSION["inloggad"] = array();
             //Sätter sessionens plats 0 till användarnamnet man loggat in med
             $_SESSION["inloggad"][0] = $tmp_username;
             $_SESSION["inloggad"][1] = $tmp_password;
-            header("Location:?");
+            
+            
         }else{
             echo "Wrong username or password!";
         }
     }
 }
+
+if(!isset($_SESSION["inloggad"])){
+echo "<form method='GET'>";
+echo "<input type='text' name='anv_namn'>";
+echo "<input type='password' name='pass'>";
+echo "<input type='submit' name='log_in' value='Logga in'>";
+echo "</form>";
+}
+
 if(isset($_SESSION["inloggad"])){
-    echo "Inloggad som " . $_SESSION["inloggad"][0];
+    if($_SESSION["inloggad"][2]){
+     echo "adminstuffshizzlemanizzledrizzlefizzle. <br>";   
+     
+     echo "Inloggad som " . $_SESSION["inloggad"][0] . "<br>";
+    echo "<form method='GET'>";
+    echo "<input type='submit' name='logga_ut' value='Logga ut'>";
+    echo "</form>";
+    }else{
+    echo "Inloggad som " . $_SESSION["inloggad"][0] . "<br>";
+    echo "<form method='GET'>";
+    echo "<input type='submit' name='logga_ut' value='Logga ut'>";
+    echo "</form>";
+    }
+}
+if(isset($_GET["logga_ut"])){
+    session_destroy();
+    header("Location:?");
+    exit();
 }
