@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,6 +7,12 @@
         <title>TTM - Hem</title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
+        
+         <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
     </head>
     <body>
         <div id="wrapper">
@@ -33,11 +40,13 @@
                     </form>
                 </div>
             </header>
-            <nav>
-
-            </nav>
             <section>
-
+                <img src="http://placehold.it/1080x400">
+                <div class="img-under">
+                    <img class="img-under-specific" src="http://placehold.it/350x380">
+                    <img class="img-under-specific" src="http://placehold.it/350x380">
+                    <img class="img-under-specific img-under-undan" src="http://placehold.it/350x380">
+                </div>
             </section>
             <footer>
 

@@ -4,7 +4,7 @@ body{
 header{
     /*overflow: auto;*/
     background-color: red;
-    height:200px;
+    height:130px;
 }
 nav{
     background-color: blue;
@@ -65,22 +65,31 @@ footer{
 }
 #sakerimitten{
     /*margin-left: 26%;*/
-    padding-top: 40px;
+    padding-top: 20px;
     float: left;
     margin-left: 5%;
    
 }
 .searchbar{
-    margin-top: 64px;
+    margin-top: 44px;
     margin-left: 100px;
 }
 .logo{
     margin-left: 10px;
-    padding-top: 36px;
+    padding-top: 16px;
     float: left;
 }
 .over-head{
     width: 100%;
     height: 50px;
     border-bottom: thin solid black;
+}
+.img-under{
+    margin-top: 10px;
+}
+.img-under-specific{
+    margin-right: 11px;
+}
+.img-under-undan{
+    margin-right: 0px;
 }
