@@ -16,9 +16,9 @@
     <body>
         <div id="wrapper">
             <header>
-                <div class="over-head">
+<!--                <div class="over-head">
 
-                </div>
+                </div>-->
                 <div class="logo"><img src="http://placehold.it/200x50"></div>
                 <div id="sakerimitten">
                     <div class="link mitt">  
@@ -51,21 +51,21 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="http://placehold.it/1080x400" alt="http://placehold.it/1080x400">
+                            <img src="http://placehold.it/1080x400" alt="...">
                             <div class="carousel-caption">
-                                <p>Första Sliden!<p/>
+                                Bild 1
                             </div>
                         </div>
                         <div class="item">
-                            <img src="http://placehold.it/1080x400" alt="http://placehold.it/1080x400">
+                            <img src="http://placehold.it/1080x400" alt="...">
                             <div class="carousel-caption">
-                                <p>Andra Sliden!<p/>
+                                Bild 2
                             </div>
                         </div>
                         <div class="item">
-                            <img src="http://placehold.it/1080x400" alt="http://placehold.it/1080x400">
+                            <img src="http://placehold.it/1080x400" alt="...">
                             <div class="carousel-caption">
-                                <p>Tredje Sliden!<p/>
+                                Bild 3
                             </div>
                         </div>
                     </div>
@@ -88,8 +88,9 @@
                 </div>
             </section>
             <footer>
-
+                
             </footer>
         </div>    
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
