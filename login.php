@@ -21,9 +21,13 @@ if (!isset($_SESSION["inloggad"])) {
         if (!empty($users)) {
             $_SESSION["inloggad"] = array();
             //Sätter sessionens plats 0 till användarnamnet man loggat in med
-            $_SESSION["inloggad"][0] = $tmp_username;
-            $_SESSION["inloggad"][1] = $tmp_password;
-            
+            $_SESSION["inloggad"]["username"] = $tmp_username;
+            $_SESSION["inloggad"]["password"] = $tmp_password;
+        if($users[0]["admin"] == "1"){
+                $_SESSION["inloggad"]["admin"] = true;
+            }else{
+                $_SESSION["inloggad"]["admin"] = false;
+            }
             
         }else{
             echo "Wrong username or password!";
@@ -40,15 +44,15 @@ echo "</form>";
 }
 
 if(isset($_SESSION["inloggad"])){
-    if($_SESSION["inloggad"][2]){
+    if($_SESSION["inloggad"]["admin"]){
      echo "adminstuffshizzlemanizzledrizzlefizzle. <br>";   
      
-     echo "Inloggad som " . $_SESSION["inloggad"][0] . "<br>";
+     echo "Inloggad som " . $_SESSION["inloggad"]["username"] . "<br>";
     echo "<form method='GET'>";
     echo "<input type='submit' name='logga_ut' value='Logga ut'>";
     echo "</form>";
     }else{
-    echo "Inloggad som " . $_SESSION["inloggad"][0] . "<br>";
+    echo "Inloggad som " . $_SESSION["inloggad"]["username"] . "<br>";
     echo "<form method='GET'>";
     echo "<input type='submit' name='logga_ut' value='Logga ut'>";
     echo "</form>";

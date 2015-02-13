@@ -17,30 +17,32 @@ if(isset($_GET["nyProdukt"])){
     $nyProd_form .= "</select>";
     $nyProd_form .= "<p>Pris:</p><input type='number' name='pris'><br>";
     $nyProd_form .= "<p>Storlek:</p><select name='storlek'><br>";
-    $nyProd_form .= "<option value='xs'>XS</option>";
-    $nyProd_form .= "<option value='s'>S</option>";
-    $nyProd_form .= "<option value='m'>M</option>";
-    $nyProd_form .= "<option value='l'>L</option>";
-    $nyProd_form .= "<option value='xl'>XL</option>";
+    $nyProd_form .= "<option value='XS'>XS</option>";
+    $nyProd_form .= "<option value='S'>S</option>";
+    $nyProd_form .= "<option value='M'>M</option>";
+    $nyProd_form .= "<option value='L'>L</option>";
+    $nyProd_form .= "<option value='XL'>XL</option>";
     $nyProd_form .= "</select>";
     $nyProd_form .= "<p>Beskrivning</p><input type='text' name='beskrivning'><br>";
     $nyProd_form .= "<p>Färg</p><input type='text' name='färg'><br>";
     $nyProd_form .= "<input type='submit' name='addProdukt' value='Lägg till'>";
     $nyProd_form .= "</form>";
 }
-if(isset($_GET["addProdukt"])){
+if(isset($_GET["addProdukt"])){    
     $tmpNamn = filter_input(INPUT_GET, 'namn', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpSex = filter_input(INPUT_GET, 'sex', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpPris = filter_input(INPUT_GET, 'pris', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpStorlek = filter_input(INPUT_GET, 'storlek', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpBeskrivning = filter_input(INPUT_GET, 'beskrivning', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpFarg = filter_input(INPUT_GET, 'färg', FILTER_SANITIZE_SPECIAL_CHARS);
-    
-    $sql = 'INSERT INTO `produktregister` (`namn`, `kön`, `pris`, `storlek`, `beskrivning`, `färg`) VALUES (:prod_namn, :prod_sex, :prod_pris, :prod_storlek, :prod_farg)';
+  
+    $sql = 'INSERT INTO produktregister (namn, kön, pris, storlek, beskrivning, färg) VALUES (:prod_namn, :prod_sex, :prod_pris, :prod_storlek, :prod_beskrivning, :prod_farg)';
     $stmt = $dbh->prepare($sql);
     $stmt->bindParam(":prod_namn", $tmpNamn);
     $stmt->bindParam(":prod_sex", $tmpSex);
     $stmt->bindParam(":prod_pris", $tmpPris);
     $stmt->bindParam(":prod_storlek", $tmpStorlek);
+    $stmt->bindParam(":prod_beskrivning", $tmpBeskrivning);
     $stmt->bindParam(":prod_farg", $tmpFarg);
     $stmt->execute();
 }
