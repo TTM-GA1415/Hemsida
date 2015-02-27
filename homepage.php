@@ -59,7 +59,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                
+
                 <div class="img-under">
                     <img class="img-under-specific" src="http://placehold.it/350x380">
                     <img class="img-under-specific" src="http://placehold.it/350x380">
@@ -67,19 +67,54 @@
                 </div>
             </section>
             <footer>
-                <div class="footer-left">
-                    <ul>
-                        <li><a href="#">Sociala medier</a></li>
-                        <li><a href="#">Öppettider</a></li>
-                        <li><a href="#">Jobba hos oss</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-mid">
-                    <a href="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/logos/payment/footer-paypal.png"
-                </div>
-                <div class="footer-right"></div>
-                
+                <div class="footer-placering">
+                    <div class="oppettider">
+                        <h5>Öppettider i lokaler:</h5>
+                        <table>
+                            <tr>    
+                                <td>Mån-/Torsdag</td>
+                                <td>09:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Fredag</td>
+                                <td>09:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Lördag</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Söndag</td>
+                                <td>12:00 - 16:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="hjalp">
+                        <p>Hjälp:</p>
+                        <a href="">Kundservice</a>
+                        <a href="">Hitta butik</a>
+                        <a href="">FAQ</a>
+                    </div>
+                    <div class="footer-mid">
+                        <p>Accepterade betalmedel:</p>
+                        <img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/logos/payment/footer-paypal.png">
+                        <img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/logos/payment/footer-visa.png">
+                        <img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/logos/payment/footer-mastercard.png">
+                    </div>
+                    <div class="footer-right">
+                        <p>Följ oss på sociala medier: </p>
+                        <a href="#"><img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/icons/footer-social-facebook.png"></a>
+                        <a href="#"><img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/icons/footer-social-twitter.png"></a>
+                        <a href="#"><img src="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/icons/footer-social-gplus.png"></a>
+                    </div>
+                </div>    
+                <!--                <div class="footer-left">
+                                    <ul>
+                                        <li><a href="#">Jobba hos oss</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                    </ul>
+                                </div>-->
+
             </footer>
         </div>    
         <script src="js/bootstrap.min.js"></script>

@@ -1,5 +1,11 @@
 body{
-    background-color: black;
+    background-color: white;
+}
+#wrapper{
+    margin: 0 auto;
+    width: 1090px;
+    border-left: thin solid black;
+    border-right: thin solid black;
 }
 .over-head{
 }
@@ -13,17 +19,63 @@ nav{
     height:200px;
 }
 section{
-    background-color: yellow;
+    /*background-color: yellow;*/
     height:200px;
 }
 footer{
-    background-color: green;
-    height: 200px;
+    /*background-color: green;*/
+    height: 100px;
+    margin-top: 600px;
 }
-#wrapper{
-    margin: 0 auto;
-    width: 1080px;
+.footer-placering{
+    margin-left: 200px;
+    border-top: thin solid grey;
+    width: 650px;
 }
+.footer-mid{
+    width: 250px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.footer-mid p{
+    margin-bottom: 1px;
+    color: black;
+}
+.footer-right{
+    float: left;
+    margin-left: -10px;
+    margin-top: 5px;
+    color: black;
+}
+.footer-right a{
+    color: black;
+}
+.footer-right p{
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+.hjalp{
+    width: 70px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 30px;
+}.hjalp p{
+    margin-bottom: 8px;
+}
+.hjalp a,p{
+    color: black;
+    font-size: 11px;
+}
+.oppettider{
+    float: left;
+    margin-left: 10px;
+}
+.oppettider h5,td{
+    color: black;
+    font-size: 11px;
+}
+
 .mitt{
     /*margin: 0 auto;*/
 }
