@@ -46,7 +46,6 @@ if(isset($_GET["addProdukt"])){
     $stmt->bindParam(":prod_farg", $tmpFarg);
     $stmt->execute();
 }
-        
 ?>
 <!DOCTYPE html>
 <html>
