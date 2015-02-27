@@ -54,7 +54,7 @@ if(isset($_GET["addProdukt"])){
         <title></title>
     </head>
     <body>
-        <a href="registrera_produkt.php?nyProdukt">Lägg till ny produkt</a>
+        <a href="admin.php?nyProdukt">Lägg till ny produkt</a>
         <?php
         echo $nyProd_form;
         ?>
