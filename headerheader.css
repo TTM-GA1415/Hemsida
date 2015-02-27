@@ -1,0 +1,26 @@
+#headerheaderwrapper{
+    
+    width:1080px;
+     border-bottom:  2px solid grey;
+    margin:0 auto;
+    overflow: auto;
+    height:35px;
+}
+form{ 
+    float:right;
+    margin-right:20px;
+ 
+  
+    margin-top:1px;
+}
+#push_little_cart{
+    float:right;
+  margin-top:0px;
+     border:2px solid red;
+    height: 25px;
+}
+p{
+    float:left;
+    
+     margin-top:1px;
+}
