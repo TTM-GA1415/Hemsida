@@ -1,9 +1,5 @@
 <?php
 //definera databasuppgifter
-define("DB_SERVER", "localhost");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_NAME", "ttm_db");
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 if (!isset($_SESSION["inloggad"])) {
     if (isset($_GET["anv_namn"]) and isset($_GET["pass"])) {
@@ -33,14 +29,6 @@ if (!isset($_SESSION["inloggad"])) {
             echo "Wrong username or password!";
         }
     }
-}
-
-if(!isset($_SESSION["inloggad"])){
-echo "<form method='GET'>";
-echo "<input type='text' name='anv_namn'>";
-echo "<input type='password' name='pass'>";
-echo "<input type='submit' name='log_in' value='Logga in'>";
-echo "</form>";
 }
 
 if(isset($_SESSION["inloggad"])){
