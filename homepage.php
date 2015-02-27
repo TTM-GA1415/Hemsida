@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 
 <html>
@@ -88,6 +88,18 @@
                 </div>
             </section>
             <footer>
+                <div class="footer-left">
+                    <ul>
+                        <li><a href="#">Sociala medier</a></li>
+                        <li><a href="#">Öppettider</a></li>
+                        <li><a href="#">Jobba hos oss</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-mid">
+                    <a href="http://skin.cdn.impericon.com/skin/frontend/icmaa-responsive/impericon/images/logos/payment/footer-paypal.png"
+                </div>
+                <div class="footer-right"></div>
                 
             </footer>
         </div>    
