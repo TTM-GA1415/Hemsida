@@ -15,30 +15,9 @@
     </head>
     <body>
         <div id="wrapper">
-            <header>
-<!--                <div class="over-head">
-
-                </div>-->
-                <div class="logo"><img src="http://placehold.it/200x50"></div>
-                <div id="sakerimitten">
-                    <div class="link mitt">  
-                        <a href="#">skitlänk</a> 
-                        <a href="#">Nyhetsbrev</a>
-                        <a href="#">Kontakt</a>
-                        <a href="#" id="rUndantag">Butiker</a>
-                    </div>
-                    <div class="kategorier mitt">
-                        <a class="herr" href="#">DAM</a>
-                        <a class="herr" href="#">HERR</a>
-                        <a class="barn" href="#">BARN</a>
-                    </div>
-                </div>    
-                <div>
-                    <form>
-                        <input class="searchbar" placeholder="Search" type="search">
-                    </form>
-                </div>
-            </header>
+            <?php
+            include('header.html');
+            ?>
             <section>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
