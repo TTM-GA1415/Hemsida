@@ -1,0 +1,29 @@
+section{
+    overflow: auto;
+    height: 700px;
+}
+.user-ruta{
+    overflow: auto;
+    
+    height: 300px;
+    width: 254px;
+    
+    margin-left: 190px;
+    margin-top: 50px;
+    
+    float: left;
+}
+h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.user_input{
+    width: 250px;
+}
+.knapp{
+    float:right;
+}
