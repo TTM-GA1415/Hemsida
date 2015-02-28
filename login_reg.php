@@ -57,6 +57,12 @@ function kollaUN($username) {
         <title>Logga in - Registrera</title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        
         <link rel="stylesheet" href="user_reg.css">
     </head>
     <body>
