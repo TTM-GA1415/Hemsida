@@ -14,10 +14,11 @@
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     </head>
     <body>
-        <div id="wrapper">
+        
             <?php
             include('header.html');
             ?>
+        <div id="wrapper">
             <section>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -28,7 +29,7 @@
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                    <div class="slider carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="http://placehold.it/1080x400" alt="...">
                             <div class="carousel-caption">
@@ -50,6 +51,7 @@
                     </div>
 
                     <!-- Controls -->
+                    <div id="bergansning">
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -58,6 +60,7 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                        </div>
                 </div>
 
                 <div class="img-under">
