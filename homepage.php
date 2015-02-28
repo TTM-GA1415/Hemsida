@@ -12,6 +12,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
         

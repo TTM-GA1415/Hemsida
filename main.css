@@ -1,5 +1,8 @@
 body{
-    background-color: white;
+    background: -webkit-linear-gradient(#E8E8E8, white);
+  background: -o-linear-gradient(#E8E8E8, white);
+  background: -moz-linear-gradient(#E8E8E8, white);
+  background: linear-gradient(#E8E8E8, white);
 }
 #wrapper{
     margin: 0 auto;
@@ -9,8 +12,10 @@ body{
 }
 header{
     /*overflow: auto;*/
-    background-color: red;
-    height:90px;
+    background-color: white;
+    height:80px;
+    border-bottom: thin solid #C7C7C7;
+    box-shadow: 0px 2px 5px #888888;
 }
 .keep-center{
     margin: 0 auto;
@@ -23,20 +28,24 @@ nav{
 section{
     /*background-color: yellow;*/
     height:800px;
-    border-top: thin solid black;
+    border-top: thin solid #C7C7C7;
     margin-top: 10px;
     padding-top: 10px;
-    border-left: thin solid black;
-    border-right: thin solid black;
+    border-left: thin solid #C7C7C7;
+    border-right: thin solid #C7C7C7;
+    background-color: white;
+    box-shadow: 0px 0px 5px #888888;
 }
 footer{
     /*background-color: green;*/
     height: 120px;
     margin-top: 0px;
-    border-bottom: thin solid black;
+    border-bottom: thin solid #C7C7C7;
     margin-bottom: 20px;
-    border-left: thin solid black;
-    border-right: thin solid black;    
+    border-left: thin solid #C7C7C7;
+    border-right: thin solid #C7C7C7;
+    background-color: white;
+    box-shadow: 0px 3px 5px #888888;
 }
 .footer-placering{
     margin-left: 225px;
@@ -88,62 +97,72 @@ footer{
     color: black;
     font-size: 11px;
 }
-
+/*
 .mitt{
-    /*margin: 0 auto;*/
-}
+    
+}*/
 .link{
-    background-color: red;
-    width: 300px;
-    margin-left: 125px;
+    background-color: white;
+    width: 350px;
+    margin-left: 135px;
     margin-bottom: 10px;
 }
 .link a{
     margin-right: 20px;
-    
+    font-size: 12px;
+    color: black;
 }
 #rUndantag{
     margin-right: 0px;
 }
+.kategorier{
+    padding-left: 118px;
+}
 .kategorier div{
     background-color: turquoise;
-    width: 70px;
+    width: 30px;
     height: 50px;
-    outline: thin solid black;
+    /*outline: thin solid black;*/
     margin: 0 auto;
     
 }
 .kategorier a{
     display: block;
-    width: 150px;
+    width: 100px;
     height: 30px;
     background-color: white;
     float: left;
     text-align: center;
     padding-top: 7px;
-    text-decoration: none;
+    /*text-decoration: none;*/
     color: black;
+    font-size: 16px;
+}
+.kategorier a:hover{
+    text-decoration-line: underline;
 }
 .kategorier p{
     vertical-align: middle;
 }
-.dam,.herr{
-    margin-right: 40px;
-}
+/*.dam,.herr{
+    margin-right: 10px;
+}*/
 #sakerimitten{
     /*margin-left: 26%;*/
-    padding-top: 20px;
+    padding-top: 5px;
     float: left;
     margin-left: 7%;
+    font-family: 'Droid Serif', serif;
+    /*color: black;*/
    
 }
 .searchbar{
-    margin-top: 54px;
-    margin-left: 97px;
+    margin-top: 39px;
+    margin-left: 143px;
 }
 .logo{
     margin-left: 8px;
-    padding-top: 30px;
+    padding-top: 15px;
     float: left;
 }
 .slider{
