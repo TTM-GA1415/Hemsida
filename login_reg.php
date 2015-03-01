@@ -44,12 +44,6 @@ function kollaUN($username) {
     }
 }
 ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,7 +64,6 @@ function kollaUN($username) {
             include('header.html');
             ?>
         <div id="wrapper">
-            
             <section>
                 <div class="user-ruta ur_ett">
                     <h2>Logga in</h2>

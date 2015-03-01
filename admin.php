@@ -18,37 +18,36 @@ $users = $stmt->fetchAll();
     <head>
         <meta charset="UTF-8">
         <title>admin</title>
-        
+
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
-        
-        
+
+
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        
+
         <link rel="stylesheet" href="admin.css">
     </head>
     <body>
-        >
-<?php
-include('header.html');
-?>
-            <div id="wrapper"
-            <section>
+        <?php
+        include('header.html');
+        ?>
+        <div id="wrapper">
+             <section>
                 <h1>Admin</h1>
                 <div class="produktregister article">
                     <h2>Produkthantering</h2>
                     <a href="admin.php?nyProdukt">Lägg till ny produkt</a>
                     <a href="admin.php?redProdukt">Redigera produkt</a>
-            <?php
-            include('registrera_produkt.php');
-            ?> 
+                    <?php
+                    include('registrera_produkt.php');
+                    ?> 
                 </div>
                 <div class="user_admin article">
-                <h2>Användarhantering</h2>
-                
+                    <h2>Användarhantering</h2>
+
                 </div>
             </section>
         </div>
