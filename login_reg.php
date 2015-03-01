@@ -66,10 +66,11 @@ function kollaUN($username) {
         <link rel="stylesheet" href="user_reg.css">
     </head>
     <body>
-        <div id="wrapper">
-            <?php
+        <?php
             include('header.html');
             ?>
+        <div id="wrapper">
+            
             <section>
                 <div class="user-ruta ur_ett">
                     <h2>Logga in</h2>

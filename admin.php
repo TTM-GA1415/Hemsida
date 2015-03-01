@@ -31,10 +31,11 @@ $users = $stmt->fetchAll();
         <link rel="stylesheet" href="admin.css">
     </head>
     <body>
-        <div id="wrapper">
+        >
 <?php
 include('header.html');
 ?>
+            <div id="wrapper"
             <section>
                 <h1>Admin</h1>
                 <div class="produktregister article">
