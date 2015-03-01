@@ -12,13 +12,34 @@ if (isset($_GET["redigera_produkt"])) {
 }
 
 if (isset($_GET["nyProdukt"])) {
-   $nyProd_form = skapaProduktForm();
+    $nyProd_form = skapaProduktForm();
 }
 if (isset($_GET["addProdukt"])) {
     skapaProduktDB();
 }
+if (isset($_GET["updateProdukt"])) {
+    $tmpNamn = filter_input(INPUT_GET, 'namn', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpSex = filter_input(INPUT_GET, 'sex', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpPris = filter_input(INPUT_GET, 'pris', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpStorlek = filter_input(INPUT_GET, 'storlek', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpBeskrivning = filter_input(INPUT_GET, 'beskrivning', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpFarg = filter_input(INPUT_GET, 'färg', FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $sql = 'UPDATE produktregister SET namn=:prod_namn, kön=:prod_sex, pris=:prod_pris, storlek=:prod_storlek, beskrivning=:prod_beskrivning, färg=:prod_farg WHERE id="' . $_GET["id"] . '"';
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(":prod_namn", $tmpNamn);
+    $stmt->bindParam(":prod_sex", $tmpSex);
+    $stmt->bindParam(":prod_pris", $tmpPris);
+    $stmt->bindParam(":prod_storlek", $tmpStorlek);
+    $stmt->bindParam(":prod_beskrivning", $tmpBeskrivning);
+    $stmt->bindParam(":prod_farg", $tmpFarg);
+    $stmt->execute();
+    header('Location:?');
+    exit;
+}
+
 //Funktioner för mindre kladd
-function skapaProduktForm(){
+function skapaProduktForm() {
     $form = "";
     $form .= "<form method='GET'>";
     $form .= "<p>Namn:</p><input type='text' name='namn'><br>";
@@ -41,7 +62,8 @@ function skapaProduktForm(){
     $form .= "</form>";
     return $form;
 }
-function skapaProduktDB(){
+
+function skapaProduktDB() {
     $tmpNamn = filter_input(INPUT_GET, 'namn', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpSex = filter_input(INPUT_GET, 'sex', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpPris = filter_input(INPUT_GET, 'pris', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -59,9 +81,10 @@ function skapaProduktDB(){
     $stmt->bindParam(":prod_farg", $tmpFarg);
     $stmt->execute();
 }
-function redigeraProduktForm(){
+
+function redigeraProduktForm() {
     $form = "";
-    
+
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
     $sql = "SELECT * FROM produktregister WHERE 1";
     $stmt = $dbh->prepare($sql);
@@ -85,15 +108,16 @@ function redigeraProduktForm(){
     $form .= "</ul>";
     return $form;
 }
-function redigeraProduktDB(){
+
+function redigeraProduktDB() {
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
     $form = "";
-    
-    $sql = "SELECT * FROM produktregister WHERE id='".$_GET["id"]."'";
+
+    $sql = "SELECT * FROM produktregister WHERE id='" . $_GET["id"] . "'";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
     $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
+
     $form .= "<form method='GET'>";
     $form .= "<p>Namn:</p><input type='text' name='namn' value='" . $produkter[0]["namn"] . "'><br>";
     $form .= "<p>Kön:</p><select name='sex'><br>";
@@ -111,13 +135,11 @@ function redigeraProduktDB(){
     $form .= "</select>";
     $form .= "<p>Beskrivning</p><input type='text' name='beskrivning' value='" . $produkter[0]["beskrivning"] . "'><br>";
     $form .= "<p>Färg</p><input type='text' name='färg' value='" . $produkter[0]["färg"] . "'><br>";
-    $form .= "<input type='submit' name='addProdukt' value='Redigera'>";
+    $form .= "<input type='hidden' name='id' value='" . $_GET["id"] . "'>";
+    $form .= "<input type='submit' name='updateProdukt' value='Redigera'>";
     $form .= "</form>";
     return $form;
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
