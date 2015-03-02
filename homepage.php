@@ -32,19 +32,19 @@
                     <!-- Wrapper for slides -->
                     <div class="slider carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="http://placehold.it/1080x400" alt="...">
+                            <img src="bilder/1080x400/kläder-på-galgar.jpg" alt="...">
                             <div class="carousel-caption">
                                 Bild 1
                             </div>
                         </div>
                         <div class="item">
-                            <img src="http://placehold.it/1080x400" alt="...">
+                            <img src="bilder/1080x400/klader.jpg" alt="...">
                             <div class="carousel-caption">
                                 Bild 2
                             </div>
                         </div>
                         <div class="item">
-                            <img src="http://placehold.it/1080x400" alt="...">
+                            <img src="bilder/1080x400/TOwiRK8.jpg" alt="...">
                             <div class="carousel-caption">
                                 Bild 3
                             </div>
@@ -65,9 +65,9 @@
                 </div>
 
                 <div class="img-under">
-                    <img class="img-under-specific" src="http://placehold.it/350x380">
-                    <img class="img-under-specific" src="http://placehold.it/350x380">
-                    <img class="img-under-specific img-under-undan" src="http://placehold.it/350x380">
+                    <img class="img-under-specific" src="bilder/350x380/201243170_62bdbe70-d074-4bd5-84cd-5bb2f993362b.jpg">
+                    <img class="img-under-specific" src="bilder/350x380/loltröjan.jpg">
+                    <img class="img-under-specific img-under-undan" src="bilder/350x380/tröja-och-skjorta.jpg">
                 </div>
             </section>
             <footer>

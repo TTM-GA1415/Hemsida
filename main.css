@@ -145,7 +145,7 @@ footer{
     vertical-align: middle;
 }
 .kategorier ul li{
-        /*float: left;*/
+        float: left;
 }
 .kategorier ul li:hover ul{
     display: block;
@@ -156,6 +156,8 @@ footer{
     margin-top: 30px;
     z-index: 50;
     border: thin solid #C7C7C7;
+    /*float: left;*/
+    width: 102px;
 }
 #sakerimitten{
     /*margin-left: 26%;*/
