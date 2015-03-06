@@ -13,6 +13,4 @@ $stmt = $dbh->prepare($sql);
 $stmt->bindParam(":search", $tmpSök);
 $stmt->execute();
 $produkter = $stmt->fetchAll();
-echo $sql . "<br>";
-echo $tmpSök . "<br>";
 
