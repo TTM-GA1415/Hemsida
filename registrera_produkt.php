@@ -6,11 +6,9 @@ $prodList_ul = "";
 if (isset($_GET["redProdukt"])) {
     $prodList_ul = redigeraProduktList();
 }
-
 if (isset($_GET["redigera_produkt"])) {
     $nyProd_form = redigeraProduktForm();
 }
-
 if (isset($_GET["nyProdukt"])) {
     $nyProd_form = skapaProduktForm();
 }
@@ -20,7 +18,9 @@ if (isset($_GET["addProdukt"])) {
 if (isset($_GET["updateProdukt"])) {
     redigeraProduktDB();
 }
-
+if (isset($_GET["deleteProdukt"])){
+    raderaProdukt();
+}
 //Funktioner för mindre kladd
 function skapaProduktForm() {
     $form = "";
@@ -91,6 +91,7 @@ function redigeraProduktList() {
         $form .= "<form method='GET'>";
         $form .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
         $form .= "<input type='submit' name='redigera_produkt' value='Redigera'>";
+        $form .= "<input type='submit' name='deleteProdukt' value='Radera'>";
         $form .= "</form>";
         $form .= "</ul>";
     }
@@ -126,7 +127,7 @@ function redigeraProduktForm() {
     $form .= "<p>Färg</p><input type='text' name='färg' value='" . $produkter[0]["färg"] . "'><br>";
     $form .= "<p>Taggar</p><input type='text' name='taggar' value='" . $produkter[0]["taggar"] . "'><br>";
     $form .= "<input type='hidden' name='id' value='" . $_GET["id"] . "'>";
-    $form .= "<input type='submit' name='updateProdukt' value='Redigera'>";
+    $form .= "<input type='submit' name='updateProdukt' value='Redigera'>";   
     $form .= "</form>";
     return $form;
 }
@@ -151,6 +152,19 @@ function redigeraProduktDB(){
     $stmt->bindParam(":prod_beskrivning", $tmpBeskrivning);
     $stmt->bindParam(":prod_farg", $tmpFarg);
     $stmt->bindParam(":prod_taggar", $tmpTaggar);
+    $stmt->execute();
+    header('Location:?');
+    exit;
+}
+
+function raderaProdukt(){
+    $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+    
+    $tmpID = $_GET["id"];
+    
+    $sql = "DELETE FROM produktregister WHERE id=:id";
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(":id", $tmpID);
     $stmt->execute();
     header('Location:?');
     exit;
