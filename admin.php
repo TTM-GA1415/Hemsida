@@ -18,6 +18,7 @@ if(isset($_GET["error"])){
     include("adminreg_fel.js");
     echo "</script>";
 }
+if(isset($_GET["visaAdmin"]))
     
 ?>
 <!DOCTYPE html>
@@ -60,6 +61,9 @@ if(isset($_GET["error"])){
                         <p>Upprepa lösenord</p><input type="password" name="password_repeat" placeholder="Upprepa lösenord" required>
                         <br>
                         <input type="submit" name="regAdmin" value="Skapa admin">
+                    </form>
+                    <form method="GET">
+                        <input type="submit" namn="visaAdmin" value="Visa administratörer">
                     </form>
                 </div>
             </section>
