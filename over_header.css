@@ -1,4 +1,4 @@
-#headerheaderwrapper{
+#over_header_wrapper{
     
     width:1080px;
      border-bottom:  2px solid grey;
@@ -13,7 +13,7 @@ form{
   
     margin-top:1px;
 }
-#push_little_cart{
+#cart{
     float:right;
   margin-top:0px;
      border:2px solid red;
