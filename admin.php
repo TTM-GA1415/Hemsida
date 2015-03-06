@@ -12,6 +12,13 @@ $stmt->bindParam(":username", $tmp_username);
 $stmt->bindParam(":password", $tmp_password);
 $stmt->execute();
 $users = $stmt->fetchAll();
+
+if(isset($_GET["error"])){
+    echo "<script>";
+    include("adminreg_fel.js");
+    echo "</script>";
+}
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,7 +42,7 @@ $users = $stmt->fetchAll();
         include('header.html');
         ?>
         <div id="wrapper">
-             <section>
+            <section>
                 <h1>Admin</h1>
                 <div class="produktregister article">
                     <h2>Produkthantering</h2>
@@ -47,7 +54,13 @@ $users = $stmt->fetchAll();
                 </div>
                 <div class="user_admin article">
                     <h2>Användarhantering</h2>
-
+                    <form action="createAdmin.php" method="GET">
+                        <p>Användarnamn</p><input type="text" name="username" placeholder="Användarnamn" required>
+                        <p>Lösenord</p><input type="password" name="password" placeholder="Lösenord" required>
+                        <p>Upprepa lösenord</p><input type="password" name="password_repeat" placeholder="Upprepa lösenord" required>
+                        <br>
+                        <input type="submit" name="regAdmin" value="Skapa admin">
+                    </form>
                 </div>
             </section>
         </div>
