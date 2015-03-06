@@ -86,6 +86,9 @@ if(isset($_GET["visaAdmin"])){
                     ?>
                 </div>
             </section>
+            <?php
+            include('footer.html');
+            ?>
         </div>
     </body>
 </html>

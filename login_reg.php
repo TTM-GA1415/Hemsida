@@ -85,6 +85,9 @@ function kollaUN($username) {
                     </form>
                 </div>
             </section>
+            <?php
+            include('footer.html');
+            ?>
         </div>
     </body>
 </html>
