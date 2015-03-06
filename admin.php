@@ -6,6 +6,7 @@ define("DB_NAME", "ttm_db");
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
 $userlist = "";
+$admins = "";
 $sql = "SELECT * FROM users WHERE anv_namn=:username AND pass=:password";
 $stmt = $dbh->prepare($sql);
 $stmt->bindParam(":username", $tmp_username);
@@ -18,7 +19,25 @@ if(isset($_GET["error"])){
     include("adminreg_fel.js");
     echo "</script>";
 }
-if(isset($_GET["visaAdmin"]))
+if(isset($_GET["visaAdmin"])){
+    $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+    $sql = "SELECT * FROM users WHERE admin=1";
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    $admins .= "<ul>";
+    foreach($users as $user){
+        $admins .= "<ul>";
+        $admins .= "<p>Användarnamn:</p>";
+        $admins .= "<li>" . $user["anv_namn"] . "</li>"; 
+        $admins .= "</ul>";
+    }
+    $admins .= "</ul>";
+    $admins .= "<a href='admin.php'>Göm lista</a>";
+}else{
+    $admins .= "<a href='admin.php?visaAdmin'>Visa administratörer</a>";
+}
     
 ?>
 <!DOCTYPE html>
@@ -62,9 +81,9 @@ if(isset($_GET["visaAdmin"]))
                         <br>
                         <input type="submit" name="regAdmin" value="Skapa admin">
                     </form>
-                    <form method="GET">
-                        <input type="submit" namn="visaAdmin" value="Visa administratörer">
-                    </form>
+                    <?php
+                    echo $admins;
+                    ?>
                 </div>
             </section>
         </div>
