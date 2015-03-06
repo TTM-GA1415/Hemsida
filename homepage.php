@@ -5,7 +5,6 @@
     <head>
         <meta charset="UTF-8">
         <title>TMNT - Hem</title>
-        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
 
         <!-- Bootstrap -->
