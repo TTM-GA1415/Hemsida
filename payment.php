@@ -14,6 +14,15 @@
                 <div class="cardselect"><img src="http://placehold.it/100x70"><input type="radio" name="card" value="visa"></div>
                 <div class="cardselect"><img src="http://placehold.it/100x70"><input type="radio" name="card" value="paypal"></div>
             </form>
+            
+            
+            <form>
+                
+                
+            </form>
+            
+            
+            
         </div>
 <?php ?>
     </body>
