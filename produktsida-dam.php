@@ -73,13 +73,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="produktalternativ">
+                <div class="produktalternativ"> 
+                    <!--det här är det som ska append:as ut-->
                     <div class="produkter"><img src="http://placehold.it/250x300"></div>
                     <div class="produkter"><img src="http://placehold.it/250x300"></div>
                     <div class="produkter"><img src="http://placehold.it/250x300"></div>
-                    
-                    
-                    
+                 
                 </div>
             </section>
         <?php

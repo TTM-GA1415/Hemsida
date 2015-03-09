@@ -13,6 +13,7 @@ section{
 .produkter{
     float:left;
     
-    
+    margin-left:35px;
+    margin-top:10px;
 }
 
