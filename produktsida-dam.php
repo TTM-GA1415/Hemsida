@@ -9,6 +9,7 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="produkter.css">
         <link rel="stylesheet" href="produkter-dam.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
@@ -73,6 +74,11 @@
                     </ul>
                 </div>
                 <div class="produktalternativ">
+                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
+                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
+                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
+                    
+                    
                     
                 </div>
             </section>
