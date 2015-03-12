@@ -1,5 +1,19 @@
-<!--<!DOCTYPE html>
-
+<!DOCTYPE html>
+<?php
+    $loginForm = "";
+    
+    if(!isset($_SESSION["inloggad"])){
+        $loginForm .= "<form action='login.php' method='GET'>";
+        $loginForm .= "<input type='text' name='anv_namn' placeholder='Username'>";
+        $loginForm .= "<input type='password' name='pass' placeholder='Password'>";
+        $loginForm .= "<input type='submit' name='log_in' Value='Logga in'>";
+        $loginForm .= "</form>";
+    }else{
+        $loginForm .= "<form action='login.php' method='GET'>";
+        $loginForm .= "<input type='Submit' name='logga_ut' Value='Logga ut'>";
+        $loginForm .= "</form>";
+    }
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -8,23 +22,19 @@
     </head>
     <body>
         
-        <div id="headerheaderwrapper">
+        <div id="over_header_wrapper">
         <p>Telefonnummer: 123456789</p>
-        <div id="push_little_cart"><a href="#"><img src="http://placehold.it/25x25"></a> </div>
-        <form>
-            <input type="text" name="anv_namn" value="Username">
-            <input type="text" name="pass" value="Password">
-            <input type="submit" name="log_in" value="Logga in">
-            <input type="submit" name="register" value="Registrera">
-        </form>
+        <div id="cart"><a href="#"><img src="http://placehold.it/25x25"></a> </div>
         
+        
+        <?php
+            echo $loginForm;
+        ?>
             
        
         
         </div>
         
-        <?php
         
-        ?>
     </body>
-</html>-->
+</html>

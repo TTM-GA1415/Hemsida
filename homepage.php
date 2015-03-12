@@ -1,6 +1,7 @@
- 
 <!DOCTYPE html>
-
+<?php
+session_start();
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -16,7 +17,7 @@
     <body>
         
             <?php
-            include('over_header.html');
+            include('over_header.php');
             include('header.html');
             ?>
         <div id="wrapper">
