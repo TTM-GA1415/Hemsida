@@ -1,3 +1,51 @@
 .banner-information{
-    margin-left: 8px;
+    margin-left: 9px;
+}
+.bilder-information{
+    width: 300px;
+    height: 600px;
+    /*outline: thin solid orange;*/
+    margin-left: 9px;
+    margin-top: 10px;
+    float: left;
+}
+.bilder-information .imgs{
+    margin-top: 10px;
+}
+.text-information{
+    float: left;
+    width: 770px;
+    height: 600px;
+    /*outline: thin solid orange;*/
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.t-i-information{
+    width: 770px;
+    height: 180px;
+    /*border-bottom: thin solid red;*/
+}
+.historia, .vision{
+    margin-top: 10px;
+    height: 190px;
+    /*border-top: thin solid red;*/
+}
+.t-i-information h4{
+    margin-left: 350px;
+    /*padding-top: 10px;*/
+    font-family: 'Droid Serif', serif;
+}
+.vision h4{
+    margin-left: 310px;
+}
+.t-i-i-text{
+    /*outline: thin solid blue;*/
+    width: 500px;
+    height: 140px;
+    margin: 0 auto;
+    font-family: 'Droid Serif', serif;
+
+}
+.t-i-i-text p{
+    font-size: 13px;
 }
