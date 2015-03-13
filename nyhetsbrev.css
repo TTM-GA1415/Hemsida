@@ -1,0 +1,30 @@
+.banner-nyhetsbrev{
+    margin-left: 9px;
+}
+.t-nyhetsbrev{
+    width: 1080px;
+    height: 600px;
+    margin-top: 10px;
+    margin-left: 9px;
+    /*outline: thin solid orange;*/
+}
+.t-n-t{
+    margin-top: 40px;
+}
+.t-n-t-text{
+    width: 600px;
+    margin-top: 40px;
+    margin: 0 auto;
+}
+.t-n-t-rubrik{
+    margin-left: 480px;
+    /*margin-top: 10px*/
+}
+.t-n-t-text p{
+    font-family: 'Droid Serif', serif;
+    line-height: 18px;
+    margin-top: 0px;
+}
+.t-n-t-rubrik h4{
+    font-family: 'Droid Serif', serif;
+}
