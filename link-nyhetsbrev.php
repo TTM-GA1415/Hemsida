@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>TMNT - Information</title>
+        <title>TMNT - Nyhetsbrev</title>
 
         <link rel="stylesheet" href="reset.css">
 

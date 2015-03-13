@@ -1,0 +1,63 @@
+.banner-kontakt{
+    margin-left: 9px;
+}
+.bilder-kontakt{
+    float: left;
+    margin-left: 9px;
+    margin-top: 10px;
+    width: 200px;
+    height: 600px;
+    outline: thin solid red;
+}
+.text-kontakt{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 870px;
+    height: 600px;
+    outline: thin solid red;
+}
+.t-text-kontakt{
+    width: 870px;
+    height: 350px;
+    outline: thin solid green;
+    margin-top: -10px;
+}
+.t-bilder-kontakt{
+    width: 870px;
+    height: 250px;
+    outline: thin solid blue;
+    margin-top: -10px;
+}
+.t-t-i-h4-kontakt{
+    margin-left: 370px;
+}
+.t-t-i-h4-kontakt h4{
+    font-family: 'Droid Serif', serif;
+    font-size: 18px;
+}
+.t-t-i-p-kontakt{
+    margin-left: 10px;
+}
+.font{
+    font-family: 'Droid Serif', serif;
+    /*font-size: 11px;*/
+}
+.t-b-h4-kontakt{
+    margin-left: 295px;
+}
+.t-b-h4-kontakt h4{
+    font-family: 'Droid Serif', serif;
+    font-size: 18px;
+    padding-top: 10px;
+}
+.t-b-bilder-kontakt{
+    margin-left: 130px;
+}
+.t-b-bild{
+    outline: thin solid pink;
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-left: 40px;
+}
