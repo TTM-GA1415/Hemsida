@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>TMNT - Hem</title>
-<!--        <link rel="stylesheet" href="reset.css">
-
-         Bootstrap 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>-->
-    </head>
-    <body>
-        
-    </body>
-</html>
 <?php
-
+session_start();
+$_SESSION["searchResults"] = "";
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
@@ -25,11 +9,27 @@ $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8
 
 $tmpSök = filter_input(INPUT_GET, 'sök', FILTER_SANITIZE_SPECIAL_CHARS);
 
-$sql = "SELECT * FROM produktregister WHERE taggar LIKE '%". $tmpSök ."%'";
+$sql = "SELECT * FROM produktregister WHERE taggar LIKE '%" . $tmpSök . "%'";
 $stmt = $dbh->prepare($sql);
 $stmt->bindParam(":search", $tmpSök);
 $stmt->execute();
 $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
+if (!empty($produkter)) {
+    foreach ($produkter as $produkt) {
+        $_SESSION["searchResults"] .= "<div class='söktProdukt'>";
+        $_SESSION["searchResults"] .= "<img src='http://placehold.it/200x180'>";
+        $_SESSION["searchResults"] .= "<h3>" . $produkt["namn"] . "</h3>";
+        $_SESSION["searchResults"] .= "<p>" . $produkt["kön"] . "</p>";
+        $_SESSION["searchResults"] .= "<p>" . $produkt["pris"] . " :-</p>";
+        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
+        $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
+        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
+        $_SESSION["searchResults"] .= "</div>";
+    }
+}else{
+    $_SESSION["searchResults"] .= "<p>Inga träffar.</p>";
+}
+header("location:searchResults.php");
+exit();
 ?>

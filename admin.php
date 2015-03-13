@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
@@ -59,6 +60,7 @@ if(isset($_GET["visaAdmin"])){
     </head>
     <body>
         <?php
+        include('over_header.php'); 
         include('header.html');
         ?>
         <div id="wrapper">

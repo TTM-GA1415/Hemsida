@@ -10,6 +10,7 @@
         $loginForm .= "</form>";
     }else{
         $loginForm .= "<form action='login.php' method='GET'>";
+        $loginForm .= "<p>Inloggad som " . $_SESSION["inloggad"]["username"] . "</p>";
         $loginForm .= "<input type='Submit' name='logga_ut' Value='Logga ut'>";
         $loginForm .= "</form>";
     }
@@ -30,9 +31,6 @@
         <?php
             echo $loginForm;
         ?>
-            
-       
-        
         </div>
         
         

@@ -1,0 +1,11 @@
+.söktProdukt{
+    width: 360px;
+    height: 200px;
+}
+.söktProdukt img{
+    float:left;
+}
+.söktProdukt p, h2{
+    float: left;    
+    margin-left: 5px;
+}

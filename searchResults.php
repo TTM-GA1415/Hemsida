@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,13 +16,15 @@
     </head>
     <body>
         <?php
-        include('over_header.html');
+        include('over_header.php');
         include('header.html');
         ?>
         <div id="wrapper">
 
             <section>
-
+                <?php
+                echo $_SESSION["searchResults"];
+                ?>
             </section>
             <?php
             include('footer.html');

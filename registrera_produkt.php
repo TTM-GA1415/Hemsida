@@ -14,6 +14,8 @@ if (isset($_GET["nyProdukt"])) {
 }
 if (isset($_GET["addProdukt"])) {
     skapaProduktDB();
+    header("Location:?");
+    exit();
 }
 if (isset($_GET["updateProdukt"])) {
     redigeraProduktDB();
@@ -80,7 +82,7 @@ function redigeraProduktList() {
     $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $form .= "<ul>";
     foreach ($produkter as $produkt) {
-        $form .= "<ul>";
+        $form .= "<ul class='adminForm'>";
         $form .= "<li><p>Namn</p>" . $produkt["namn"] . "</li>";
         $form .= "<li><p>Kön</p>" . $produkt["kön"] . "</li>";
         $form .= "<li><p>Pris</p>" . $produkt["pris"] . "</li>";
