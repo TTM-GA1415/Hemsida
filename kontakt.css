@@ -7,7 +7,7 @@
     margin-top: 10px;
     width: 200px;
     height: 600px;
-    outline: thin solid red;
+    /*outline: thin solid red;*/
 }
 .text-kontakt{
     float: left;
@@ -15,18 +15,18 @@
     margin-left: 10px;
     width: 870px;
     height: 600px;
-    outline: thin solid red;
+    /*outline: thin solid red;*/
 }
 .t-text-kontakt{
     width: 870px;
     height: 350px;
-    outline: thin solid green;
+    /*outline: thin solid green;*/
     margin-top: -10px;
 }
 .t-bilder-kontakt{
     width: 870px;
     height: 250px;
-    outline: thin solid blue;
+    border-top: thin solid grey;
     margin-top: -10px;
 }
 .t-t-i-h4-kontakt{
@@ -55,7 +55,7 @@
     margin-left: 130px;
 }
 .t-b-bild{
-    outline: thin solid pink;
+    /*outline: thin solid pink;*/
     width: 150px;
     height: 200px;
     float: left;

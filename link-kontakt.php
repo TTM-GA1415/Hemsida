@@ -46,17 +46,17 @@
                                 <div class="t-b-bild bild1">
                                     <img src="http://placehold.it/150x150">
                                     <p><b>Martin Benno Klevbrand</b></p>
-                                    <p>Front side</p>
+                                    <p>Front-side</p>
                                 </div>
                                 <div class="t-b-bild bild2">
                                     <img src="http://placehold.it/150x150">
                                     <p><b>Truls Warvsten</b></p>
-                                    <p>Back side</p>
+                                    <p>Back-side</p>
                                 </div>
                                 <div class="t-b-bild bild3">
                                     <img src="http://placehold.it/150x150">
                                     <p><b>Theodor Årnfelt</b></p>
-                                    <p>Front side & design</p>
+                                    <p>Front-side & design</p>
                                 </div>
                             </div>
                         </div>
