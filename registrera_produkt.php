@@ -1,4 +1,5 @@
 <?php
+session_start();
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
 $nyProd_form = "";
