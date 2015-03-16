@@ -1,26 +1,44 @@
 #over_header_wrapper{
-    
+    /*overflow: hidden;*/
     width:1080px;
-     border-bottom:  2px solid grey;
+    border-bottom:  2px solid grey;
     margin:0 auto;
     overflow: auto;
-    height:35px;
+    height:30px;
 }
 form{ 
     float:right;
     margin-right:20px;
- 
-  
     margin-top:1px;
 }
 #cart{
     float:right;
-  margin-top:0px;
-     border:2px solid red;
+    margin-top:0px;
+    /*border:2px solid red;*/
     height: 25px;
 }
 #over_header_wrapper p{
     float:left;
-    
-     margin-top:1px;
+    font-family: 'Droid Serif', serif;
+    /*padding-top:7px;*/
+    /*vertical-align: middle;*/
+}
+.infoga{
+    height: 18px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.button-over-header{
+    height: 18px;
+    font-size: 9px;
+    margin-top: 0px;
+}
+#telefonnummer{
+/*    height: 15px;
+    border-right: thin solid black;*/
+    width: 200px;
+    float: left;
+    position: absolute;
+    padding-top: 7px; 
+    padding-left: 2px;
 }

@@ -4,9 +4,9 @@
     
     if(!isset($_SESSION["inloggad"])){
         $loginForm .= "<form action='login.php' method='GET'>";
-        $loginForm .= "<input type='text' name='anv_namn' placeholder='Username'>";
-        $loginForm .= "<input type='password' name='pass' placeholder='Password'>";
-        $loginForm .= "<input type='submit' name='log_in' Value='Logga in'>";
+        $loginForm .= "<input type='text' name='anv_namn' class='infoga username' placeholder='Username'>";
+        $loginForm .= "<input type='password' name='pass' class='infoga password' placeholder='Password'>";
+        $loginForm .= "<input type='submit' name='log_in' class='button-over-header' Value='Logga in'>";
         $loginForm .= "</form>";
     }else{
         $loginForm .= "<form action='login.php' method='GET'>";
@@ -24,8 +24,8 @@
     <body>
         
         <div id="over_header_wrapper">
-        <p>Telefonnummer: 123456789</p>
-        <div id="cart"><a href="#"><img src="http://placehold.it/25x25"></a> </div>
+            <div id="telefonnummer"><p>Telefonnummer: 123456789</p></div>
+        <div id="cart"><a href="#"><img src="bilder/kundvagn/kundvagn_minskad.png"></a> </div>
         
         
         <?php
