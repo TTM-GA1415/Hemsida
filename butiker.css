@@ -1,0 +1,33 @@
+.banner-butiker{
+    margin-left: 9px;
+}
+.bilder-butiker{
+    margin-left: 9px;
+    margin-top: 10px;
+    width: 300px;
+    height: 600px;
+    /*outline: thin solid orange;*/
+    float: left;
+}
+.text-butiker{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 770px;
+    height: 600px;
+    /*outline: thin solid orange;*/
+    float: left;
+}
+.t-b-h4{
+    margin-left: 350px;
+}
+.t-b-h4 h4{
+    font-family: 'Droid Serif', serif;
+}
+.t-b-text{
+    width: 500px;
+    margin: 0 auto;
+}
+.t-b-text p{
+    font-family: 'Droid Serif', serif;
+    font-size: 13px;
+}
