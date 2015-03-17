@@ -16,6 +16,16 @@ $stmt->bindParam(":search", $tmpSök);
 $stmt->execute();
 $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+if(!isset($_SESSION["kundvagn"])){
+    
+}
+
+
+
+
+
+
+
 //if(!isset($_SESSION["kundvagn"])){
     $produkter[0][] = $antal;
     $_SESSION["kundvagn"] = array();
@@ -23,3 +33,14 @@ $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
     var_dump($_SESSION["kundvagn"]);
     echo "<br>";
 //}
+    //FÖR OM ANTAL INTE EXISTERAR
+function addToCart(array $produkt, $antal){
+    $produkt[0][] = $antal;
+    $_SESSION["kundvagn"][] = $produkt[0];
+}    
+
+function increaseCart(array $produkt, $antal, $id){
+    if($_SESSION["kundvagn"][]["id"] == $id){
+        
+    }
+}
