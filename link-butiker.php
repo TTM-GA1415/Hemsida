@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -64,7 +67,7 @@
                 </div>
             </section>
             <?php
-                include('footer.html');
+            include('footer.html');
             ?>
         </div>
     </body>
