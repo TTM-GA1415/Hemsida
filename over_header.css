@@ -39,6 +39,25 @@ form{
     width: 200px;
     float: left;
     position: absolute;
-    padding-top: 7px; 
+/*    padding-top: 7px; */
     padding-left: 2px;
+}
+.text{
+    float: right;
+    height: 15px;
+    margin-right: 5px;
+    /*outline: thin solid orange;*/
+
+}
+
+#telefonnummer p, .anvandare{
+    line-height: 26px;
+    paddin-top: 2px;
+    margin:0;
+}
+.loggaut{
+    margin-top: 0px;
+    height: 18px;
+    font-size: 11px;
+    /*margin-top: -5px;*/
 }

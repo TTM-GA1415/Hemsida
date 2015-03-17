@@ -9,10 +9,12 @@
         $loginForm .= "<input type='submit' name='log_in' class='button-over-header' Value='Logga in'>";
         $loginForm .= "</form>";
     }else{
+        
+        
         $loginForm .= "<form action='login.php' method='GET'>";
-        $loginForm .= "<p>Inloggad som " . $_SESSION["inloggad"]["username"] . "</p>";
-        $loginForm .= "<input type='Submit' name='logga_ut' Value='Logga ut'>";
+        $loginForm .= "<input type='Submit' name='logga_ut' class='loggaut' Value='Logga ut'>";
         $loginForm .= "</form>";
+        $loginForm .= "<div class='text'><p class='anvandare'>Inloggad som " . $_SESSION["inloggad"]["username"] . "</p></div>";
     }
 ?>
 <html>
