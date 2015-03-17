@@ -25,6 +25,11 @@ if (!empty($produkter)) {
         $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
         $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
         $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
+        $_SESSION["searchResults"] .= "<form method='GET'>";
+        $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
+        $_SESSION["searchResults"] .= "<input type='number' name='antal' value='1'>";
+        $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' value='Lägg till i kundvagn'>";
+        $_SESSION["searchResults"] .= "</form>";
         $_SESSION["searchResults"] .= "</div>";
     }
 }else{
