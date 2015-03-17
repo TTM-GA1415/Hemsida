@@ -23,7 +23,13 @@ session_start();
 
             <section>
                 <?php
-                echo $_SESSION["searchResults"];
+                if(isset($_SESSION["searchResults"])){
+                    echo $_SESSION["searchResults"];
+                }else{
+                    header("location:homepage.php");
+                    exit();
+                }
+                
                 ?>
             </section>
             <?php
