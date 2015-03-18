@@ -20,11 +20,11 @@ if (!empty($produkter)) {
         $_SESSION["searchResults"] .= "<div class='söktProdukt'>";
         $_SESSION["searchResults"] .= "<img src='http://placehold.it/200x180'>";
         $_SESSION["searchResults"] .= "<h3>" . $produkt["namn"] . "</h3>";
-        $_SESSION["searchResults"] .= "<p>" . $produkt["kön"] . "</p>";
+//        $_SESSION["searchResults"] .= "<p>" . $produkt["kön"] . "</p>";
         $_SESSION["searchResults"] .= "<p>" . $produkt["pris"] . " :-</p>";
-        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
-        $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
-        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
+//        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
+//        $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
+//        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
         $_SESSION["searchResults"] .= "<form method='GET' action='addToCart.php'>";
         $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
         $_SESSION["searchResults"] .= "<input type='number' name='antal' value='1'>";
