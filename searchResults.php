@@ -20,7 +20,7 @@ session_start();
         include('header.html');
         ?>
         <div id="wrapper">
-
+            
             <section>
                 <?php
                 if(isset($_SESSION["searchResults"])){
