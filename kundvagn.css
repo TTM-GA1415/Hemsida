@@ -1,0 +1,9 @@
+.cart{
+  width: 400px;
+}
+
+.cartProduct{
+    margin: 0 auto;
+    border-bottom: 2px solid grey;
+}
+

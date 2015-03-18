@@ -7,7 +7,8 @@
         <meta charset="UTF-8">
         <title>Kundvagn</title>
         <link rel="stylesheet" href="reset.css">
-
+        <link rel="stylesheet" href="kundvagn.css">
+        
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
@@ -25,13 +26,20 @@
                 <?php
                 $kundvagn = "";
                 $summa = 0;
+                
+                $kundvagn .= "<div class='cart'>";
                 foreach($_SESSION["kundvagn"] as $produkt){
-                    $kundvagn .= $produkt["namn"] . "<br>";
-                    $kundvagn .= "Pris: " . $produkt["pris"] . "<br>";
-                    $kundvagn .= "Antal: ";
-                    $summa = $produkt["pris"] * $produkt["antal"];
-                    $kundvagn .= "Totalt: " . $summa . " SEK<br>";
+                    
+                    $kundvagn .= "<div class='cartProduct'>";
+                    $kundvagn .= "<h4>".$produkt["namn"]. "</h4>" . "<br>";
+                    $kundvagn .= "Pris: " . $produkt["pris"] . ":-" . "<br>";
+                    $kundvagn .= "Antal: " . $produkt["antal"] . "<br>";
+                    $summa += $produkt["pris"] * $produkt["antal"];
+                    $kundvagn .= "</div>";
                 }
+                $kundvagn .= "Totalt: " . $summa . " SEK<br>";
+                $kundvagn .= "</div>";
+                
                 echo $kundvagn;
                 ?>
             </section>
