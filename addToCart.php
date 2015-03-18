@@ -26,24 +26,25 @@ if (!isset($_SESSION["kundvagn"])) {
     foreach($_SESSION["kundvagn"] as $kundvagnPlats){
         if($kundvagnPlats["id"] == $id){
             $exists = true;
-            echo "true" . "<br>";
             break;
         }else{
             $exists = false;
-            echo "false" . "<br>";
         }
     }
      if($exists){
          increaseCart($produkter, $antal, $id);
+         header("location:kundvagn.php");
+         exit();
      }else{
          addToCart($produkter, $antal);
+         header("location:kundvagn.php");
+         exit();
      }
 }
 
 function addToCart(array $produkt, $antal) {
     $produkt[0]["antal"] = $antal;
     $_SESSION["kundvagn"][] = $produkt[0];
-    echo "Produkten " . $produkt[0]["namn"] . " har lagts till i din kundvagn.";
 }
 
 function increaseCart(array $produkt, $antal, $id) {
@@ -51,11 +52,8 @@ function increaseCart(array $produkt, $antal, $id) {
     foreach ($_SESSION["kundvagn"] as $compare) {
         if (!$compare["id"] == $id) {
             $counter++;
-            echo $counter;
         } else {
             $_SESSION["kundvagn"][$counter]["antal"] += $antal;
-            echo "Antal " . $_SESSION["kundvagn"][$counter]["namn"] . " har ökats med " . $antal . "<br>";
-            var_dump($_SESSION["kundvagn"][$counter]) . "<br>";
         }
     }
    
