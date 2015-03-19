@@ -42,6 +42,7 @@
                 
                 echo $kundvagn;
                 ?>
+                <a href="payment.php">Checka ut</a>
             </section>
 
 

@@ -7,7 +7,8 @@ session_start();
         <meta charset="UTF-8">
         <title>TMnT - Resultat</title>
         <link rel="stylesheet" href="reset.css">
-
+        <link rel="stylesheet" href="search.css">
+        <link rel="stylesheet" href="main.css">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">

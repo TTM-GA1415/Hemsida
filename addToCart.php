@@ -21,25 +21,27 @@ if (!isset($_SESSION["kundvagn"])) {
     $produkter[0]["antal"] = $antal;
     $_SESSION["kundvagn"] = array();
     $_SESSION["kundvagn"][] = $produkter[0];
-}else{
+    header("location:kundvagn.php");
+    exit();
+} else {
     $exists = false;
-    foreach($_SESSION["kundvagn"] as $kundvagnPlats){
-        if($kundvagnPlats["id"] == $id){
+    foreach ($_SESSION["kundvagn"] as $kundvagnPlats) {
+        if ($kundvagnPlats["id"] == $id) {
             $exists = true;
             break;
-        }else{
+        } else {
             $exists = false;
         }
     }
-     if($exists){
-         increaseCart($produkter, $antal, $id);
-         header("location:kundvagn.php");
-         exit();
-     }else{
-         addToCart($produkter, $antal);
-         header("location:kundvagn.php");
-         exit();
-     }
+    if ($exists) {
+        increaseCart($produkter, $antal, $id);
+        header("location:kundvagn.php");
+        exit();
+    } else {
+        addToCart($produkter, $antal);
+        header("location:kundvagn.php");
+        exit();
+    }
 }
 
 function addToCart(array $produkt, $antal) {
@@ -56,6 +58,4 @@ function increaseCart(array $produkt, $antal, $id) {
             $_SESSION["kundvagn"][$counter]["antal"] += $antal;
         }
     }
-   
 }
-
