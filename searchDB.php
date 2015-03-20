@@ -19,7 +19,7 @@ if (!empty($produkter)) {
     foreach ($produkter as $produkt) {
         $_SESSION["searchResults"] .= "<div class='söktProdukt'>";
         $_SESSION["searchResults"] .= "<img src='http://placehold.it/200x180'>";
-        $_SESSION["searchResults"] .= "<h3>" . $produkt["namn"] . "</h3>";
+        $_SESSION["searchResults"] .= "<h4>" . $produkt["namn"] . "</h4>";
 //        $_SESSION["searchResults"] .= "<p>" . $produkt["kön"] . "</p>";
         $_SESSION["searchResults"] .= "<p>" . $produkt["pris"] . " :-</p>";
 //        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";

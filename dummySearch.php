@@ -49,7 +49,7 @@ session_start();
             </div>
     <div class='söktProdukt'>
                 <img src='http://placehold.it/200x180'>
-                <p>Namn:</p>
+                <h4>tröja med ränder</h4>
                 
                 <p>pris:</p>    
                 <input type='number' name='antal' value='1'>

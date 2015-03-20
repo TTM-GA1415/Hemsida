@@ -1,6 +1,6 @@
 .söktProdukt{
     width: 355px;
-    height: 210px;
+    height: 215px;
     border-left: thin solid #C7C7C7;
     border-right: thin solid #C7C7C7;
     border-bottom: thin solid #C7C7C7;
@@ -14,13 +14,14 @@
     
     
 }
-.söktProdukt img{float:left;
-                 
+.söktProdukt img{
+    float:left;
+   margin-bottom: 2px;        
    
 }
-.söktProdukt p, h2{
-
-    margin-left: 5px;
+.söktProdukt p, h4{
+margin-right:5px;
+/*    margin-left: 5px;*/
 }
 #wrapper{
 /*    outline: 2px solid green;*/
