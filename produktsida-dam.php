@@ -79,9 +79,9 @@ session_start();
                 </div>
                 <div class="produktalternativ"> 
                     <!--det här är det som ska append:as ut-->
-                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
-                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
-                    <div class="produkter"><img src="http://placehold.it/250x300"></div>
+                    <div class="produkter"><img src="http://placehold.it/200x180"></div>
+                    <div class="produkter"><img src="http://placehold.it/200x180"></div>
+                    <div class="produkter"><img src="http://placehold.it/200x180"></div>
                  
                 </div>
             </section>
