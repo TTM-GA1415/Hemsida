@@ -22,8 +22,9 @@
 }
 .t-n-t-text p{
     font-family: 'Droid Serif', serif;
+    font-size: 13px;
+    font-weight: 500;
     line-height: 18px;
-    margin-top: 0px;
 }
 .t-n-t-rubrik h4{
     font-family: 'Droid Serif', serif;

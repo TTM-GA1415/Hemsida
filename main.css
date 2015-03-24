@@ -162,6 +162,9 @@ footer{
     /*float: left;*/
     width: 102px;
 }
+.kategorier ul ul li a{
+    font-size: 12px;
+}
 #sakerimitten{
     /*margin-left: 26%;*/
     padding-top: 5px;
