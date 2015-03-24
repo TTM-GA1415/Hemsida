@@ -33,7 +33,7 @@ session_start();
                     <div class="text-kontakt">
                         <div class="t-text-kontakt">
                             <div class="t-t-inuti-kontakt">
-                                <div class="t-t-i-h4-kontakt font"><h4>Kontakt</h4></div>
+                                <div class="fonts"><h4>Kontakt</h4></div>
                                 <div class="t-t-i-p-kontakt font">
                                     Telefonnummer: 123456789<br /><br />
                                     Mailadress/e-mail: tmnt-klader@baproductions.com<br /><br />
@@ -44,7 +44,7 @@ session_start();
                             </div>
                         </div>
                         <div class="t-bilder-kontakt">
-                            <div class="t-b-h4-kontakt font"><h4>Skapare och ansvariga utgivare</h4></div>
+                            <div class="fonts"><h4>Skapare och ansvariga utgivare</h4></div>
                             <div class="t-b-bilder-kontakt">
                                 <div class="t-b-bild bild1">
                                     <img src="bilder/profil/martin-croped.jpg">
@@ -52,12 +52,12 @@ session_start();
                                     <p>Front-side</p>
                                 </div>
                                 <div class="t-b-bild bild2">
-                                    <img src="http://placehold.it/150x150">
+                                    <img src="bilder/profil/truls.jpg">
                                     <p><b>Truls Warvsten</b></p>
                                     <p>Back-side</p>
                                 </div>
                                 <div class="t-b-bild bild3">
-                                    <img src="http://placehold.it/150x150">
+                                    <img src="bilder/profil/theodor.jpg">
                                     <p><b>Theodor Årnfelt</b></p>
                                     <p>Front-side & design</p>
                                 </div>
