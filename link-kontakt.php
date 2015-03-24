@@ -47,7 +47,7 @@ session_start();
                             <div class="t-b-h4-kontakt font"><h4>Skapare och ansvariga utgivare</h4></div>
                             <div class="t-b-bilder-kontakt">
                                 <div class="t-b-bild bild1">
-                                    <img src="http://placehold.it/150x150">
+                                    <img src="bilder/profil/martin-croped.jpg">
                                     <p><b>Martin Benno Klevbrand</b></p>
                                     <p>Front-side</p>
                                 </div>
