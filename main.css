@@ -202,11 +202,42 @@ footer{
     margin-left: 8px;
 }
 .img-under-specific{
-    margin-right: 11px;
+    margin-right: 15px;
+}
+.img-under-class:hover .hover-display{
+    background: rgba(255, 255, 255, 1);
 }
 .img-under-undan{
     margin-right: 0px;
 }
 .banner-dam{
     margin-left: 8px;
+}
+.img-under-class{
+    float: left;
+    position: relative;
+}
+.hover-display{
+    position: absolute;
+    width: 350px;
+    height: 70px;
+    /*background-color: white;*/
+    left: 0px;
+    top: 240px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.6);
+}
+.hover-display h5, p{
+    /*padding-top: 50px;*/
+    font-family: 'Droid Serif', serif;
+    line-height: 5px;
+    /*padding-left: 110px;*/
+    font-weight: 700;
+}
+.hover-display h5{
+    /*padding-left: 143px;*/
+    padding-top: 15px;
+}
+.homepage-h5, .homepage-p{
+    text-align: center;
 }

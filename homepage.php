@@ -66,9 +66,27 @@ session_start();
                 </div>
 
                 <div class="img-under">
-                    <img class="img-under-specific" src="bilder/350x380/201243170_62bdbe70-d074-4bd5-84cd-5bb2f993362b.jpg">
-                    <img class="img-under-specific" src="bilder/350x380/loltröjan.jpg">
-                    <img class="img-under-specific img-under-undan" src="bilder/350x380/tröja-och-skjorta.jpg">
+                    <div class="img-under-class">
+                        <img class="img-under-specific" src="bilder/350x380/201243170_62bdbe70-d074-4bd5-84cd-5bb2f993362b.jpg">
+                        <div class="hover-display">
+                            <div class="homepage-h5"><h5>Just nu!</h5></div>
+                            <div class="homepage-p"><p>Extrapris på alla byxor</p></div>
+                        </div>
+                    </div>
+                    <div class="img-under-class">
+                        <img class="img-under-specific" src="bilder/350x380/loltröjan.jpg">
+                        <div class="hover-display">
+                            <div class="homepage-h5"><h5>Prisvärt</h5></div>
+                            <div class="homepage-p"><p>Kolla in nya prudukter</p></div>
+                        </div>
+                    </div>
+                    <div class="img-under-class">
+                        <img class="img-under-specific img-under-undan" src="bilder/350x380/tröja-och-skjorta.jpg">
+                        <div class="hover-display">
+                            <div class="homepage-h5"><h5>Nyligen anlänt</h5></div>
+                            <div class="homepage-p"><p>Snygga tröjor för hela slanten</p></div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <?php
