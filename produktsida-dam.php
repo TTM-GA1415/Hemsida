@@ -30,51 +30,12 @@ session_start();
                 <div class="kategorier-meny">
                     <h4>Dam</h4>
                     <ul class="kategorier-dam">
-                        <li><a href="#">Tröjor</a>
-<!--                            <ul>
-                                <li><a href="#">T-shirts</a></li>
-                                <li><a href="#">Linnen</a></li>
-                                <li><a href="#">Koftor</a></li>
-                                <li><a href="#">Hoodies</a></li>
-                                <li><a href="#">Sport-/träningströjor</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="#">Jackor</a>
-<!--                            <ul>
-                                <li><a href="#">Vinterjackor</a></li>
-                                <li><a href="#">Vårjackor</a></li>
-                                <li><a href="#">Regnjackor</a></li>
-                                <li><a href="#">Skid-/Sportjackor</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="#">Byxor</a>
-<!--                            <ul>
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Chinos</a></li>
-                                <li><a href="#">Mjukisbyxor</a></li>
-                                <li><a href="#">Tränings-/Fritidsbyxor</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="#">Skor</a>
-<!--                            <ul>
-                                <li><a href="#">Lågskor</a></li>
-                                <li><a href="#">Klackade skor</a></li>
-                                <li><a href="#">träning-/löpskor</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="#">Mössor och Kepsar</a>
-<!--                            <ul>
-                                <li><a href="#">Kepsar</a></li>
-                                <li><a href="#">Mössor</a></li>
-                            </ul>-->
-                        </li>
-                        <li><a href="#">Accessoarer</a>
-<!--                            <ul>
-                                <li><a href="#">Klockor/Armbandsur</a></li>
-                                <li><a href="#">Armband/Halsband</a></li>
-                                <li><a href="#">Glasögon</a></li>
-                            </ul>-->
-                        </li>
+                        <li><a href="#">Tröjor</a></li>
+                        <li><a href="#">Jackor</a></li>
+                        <li><a href="#">Byxor</a></li>
+                        <li><a href="#">Skor</a></li>
+                        <li><a href="#">Mössor och Kepsar</a></li>
+                        <li><a href="#">Accessoarer</a></li>
                     </ul>
                 </div>
                 <div class="produktalternativ"> 
