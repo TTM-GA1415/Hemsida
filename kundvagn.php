@@ -24,6 +24,7 @@
         <div id="wrapper">
             <section>
                 <?php
+                if(isset($_SESSION["kundvagn"])){
                 $kundvagn = "";
                 $summa = 0;
                 
@@ -41,8 +42,12 @@
                 $kundvagn .= "</div>";
                 
                 echo $kundvagn;
+                echo "<a href='payment.php'>Checka ut</a>";
+                }else{
+                    echo "Din kundvagn är tom.";
+                }
                 ?>
-                <a href="payment.php">Checka ut</a>
+                
             </section>
 
 

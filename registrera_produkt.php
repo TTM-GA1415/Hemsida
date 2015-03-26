@@ -14,8 +14,6 @@ if (isset($_GET["nyProdukt"])) {
 }
 if (isset($_GET["addProdukt"])) {
     skapaProduktDB();
-    header("Location:?");
-    exit();
 }
 if (isset($_GET["updateProdukt"])) {
     redigeraProduktDB();
