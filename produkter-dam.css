@@ -26,3 +26,49 @@ header{
     color: black;
     font-family: 'Droid Serif', serif;
 }
+.produkter{
+    outline: thin solid orange;
+    width: 250px;
+}
+.produkter h4{
+    text-align: center;
+    font-family: 'Droid Serif', serif;
+}
+.produkter #p{
+    margin-left: 10%;
+}
+.produkter img{
+    margin-left: 10%;
+    
+}
+.produkter .antal{
+    float: right;
+    width: 50px;
+    height: 24px;
+    border: thin solid black;
+    /*padding-left: -20px;*/
+    
+}
+.produkter .add{
+    background-color: white;
+    border: thin solid black;
+    position: absolute;
+    margin-left: -155px;
+    font-family: 'Droid Serif', serif;
+}
+.produkter .add:hover{
+    border: thin solid red;
+}
+.beskrivning{
+    border: thin solid orange;
+    height: 60px;
+    width: 205px;
+    margin-left: 10%;
+    overflow: auto;
+}
+.beskrivning p{
+    padding-top: 5px;
+    padding-left: 2px;
+    font-weight: 500;
+    line-height: 12px;
+}

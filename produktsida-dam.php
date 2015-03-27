@@ -1,5 +1,39 @@
 <?php
 session_start();
+$artikel = "";
+define("DB_SERVER", "localhost");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
+define("DB_NAME", "ttm_db");
+$dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+
+$sql = "SELECT * FROM produktregister WHERE kön LIKE '%dam%'";
+$stmt = $dbh->prepare($sql);
+$stmt->bindParam(":search", $tmpSök);
+$stmt->execute();
+$produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if (!empty($produkter)) {
+    foreach ($produkter as $produkt) {
+        $artikel .= "<div class='produkter'>";
+        $artikel .= "<img src='http://placehold.it/205x180'>";
+        $artikel .= "<h4>" . $produkt["namn"] . "</h4>";
+//        $produkt .= "<p>" . $produkt["kön"] . "</p>";
+        $artikel .= "<p id='p'> Pris: " . $produkt["pris"] . " :-</p>";
+        $artikel .= "<div class='beskrivning'><p>" . $produkt["beskrivning"] . "</p></div>";
+//        $produkt .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
+//        $produkt .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
+//        $produkt .= "<p>Färg: " . $produkt["färg"] . "</p>";
+        $artikel .= "<form method='GET' action='addToCart.php'>";
+        $artikel .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
+        $artikel .= "<input type='number' class='antal' name='antal' value='1'>";
+        $artikel .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+        $artikel .= "</form>";
+        $artikel .= "</div>";
+    }
+}else{
+    $artikel .= "<p>Inga träffar.</p>";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,9 +74,13 @@ session_start();
                 </div>
                 <div class="produktalternativ"> 
                     <!--det här är det som ska append:as ut-->
+                    <?php
+                        echo $artikel;
+                    ?>
+
+                    <!--<div class="produkter"><img src="http://placehold.it/200x180"></div>
                     <div class="produkter"><img src="http://placehold.it/200x180"></div>
-                    <div class="produkter"><img src="http://placehold.it/200x180"></div>
-                    <div class="produkter"><img src="http://placehold.it/200x180"></div>
+                    <div class="produkter"><img src="http://placehold.it/200x180"></div>-->
                  
                 </div>
             </section>
