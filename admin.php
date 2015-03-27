@@ -20,7 +20,7 @@ if(isset($_POST["error"])){
     include("adminreg_fel.js");
     echo "</script>";
 }
-if(isset($_POST["visaAdmin"])){
+if(isset($_GET["visaAdmin"])){
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
     $sql = "SELECT * FROM users WHERE admin=1";
     $stmt = $dbh->prepare($sql);

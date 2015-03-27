@@ -3,13 +3,13 @@ $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8
 
 $nyProd_form = "";
 $prodList_ul = "";
-if (isset($_POST["redProdukt"])) {
+if (isset($_GET["redProdukt"])) {
     $prodList_ul = redigeraProduktList();
 }
 if (isset($_POST["redigera_produkt"])) {
     $nyProd_form = redigeraProduktForm();
 }
-if (isset($_POST["nyProdukt"])) {
+if (isset($_GET["nyProdukt"])) {
     $nyProd_form = skapaProduktForm();
 }
 if (isset($_POST["addProdukt"])) {
