@@ -1,5 +1,8 @@
 <?php
     session_start();
+    function reduceAmount($amount){
+        
+    }
 ?>
 <!DOCTYPE html>
 <html>
