@@ -3,7 +3,7 @@
     $loginForm = "";
     
     if(!isset($_SESSION["inloggad"])){
-        $loginForm .= "<form action='login.php' method='GET'>";
+        $loginForm .= "<form action='login.php' method='POST'>";
         $loginForm .= "<input type='text' name='anv_namn' class='infoga username' placeholder='Username'>";
         $loginForm .= "<input type='password' name='pass' class='infoga password' placeholder='Password'>";
         $loginForm .= "<input type='submit' name='log_in' class='button-over-header' Value='Logga in'>";
@@ -11,7 +11,7 @@
     }else{
         
         
-        $loginForm .= "<form action='login.php' method='GET'>";
+        $loginForm .= "<form action='login.php' method='POST'>";
         $loginForm .= "<input type='Submit' name='logga_ut' class='loggaut' Value='Logga ut'>";
         $loginForm .= "</form>";
         $loginForm .= "<div class='text'><p class='anvandare'>Inloggad som " . $_SESSION["inloggad"]["username"] . "</p></div>";

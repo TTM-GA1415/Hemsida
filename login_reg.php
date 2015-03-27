@@ -6,10 +6,10 @@ define("DB_NAME", "ttm_db");
 
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
-if (isset($_GET["user_reg"])) {
-    $tmp_username = filter_input(INPUT_GET, 'username_reg', FILTER_SANITIZE_SPECIAL_CHARS);
-    $tmp_password = filter_input(INPUT_GET, 'password_reg', FILTER_SANITIZE_SPECIAL_CHARS);
-    $tmp_passwordrepeat = filter_input(INPUT_GET, 'passwordrepeat_reg', FILTER_SANITIZE_SPECIAL_CHARS);
+if (isset($_POST["user_reg"])) {
+    $tmp_username = filter_input(INPUT_POST, 'username_reg', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmp_password = filter_input(INPUT_POST, 'password_reg', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmp_passwordrepeat = filter_input(INPUT_POST, 'passwordrepeat_reg', FILTER_SANITIZE_SPECIAL_CHARS);
 
     $upptaget = kollaUN($tmp_username);
     if (!$upptaget) {
@@ -70,7 +70,7 @@ include('header.html');
             <section>
                 <div class="user-ruta ur_ett">
                     <h2>Logga in</h2>
-                    <form method="GET">
+                    <form method="POST">
                         <p>Användarnamn:</p><input class="user_input" type="text" name="anv_namn" required>
                         <p>Lösenord:</p><input class="user_input" type="password" name="pass" required>
                         <br>
@@ -79,7 +79,7 @@ include('header.html');
                 </div>
                 <div class="user-ruta ur_tva">
                     <h2>Registrera</h2>
-                    <form method="GET">
+                    <form method="POST">
                         <p>Användarnamn:</p><input class="user_input" type="text" name="username_reg" required>
                         <p>Lösenord:</p><input class="user_input" type="password" name="password_reg" required>
                         <p>Upprepa lösenord:</p><input class="user_input" type="password" name="passwordrepeat_reg" required>

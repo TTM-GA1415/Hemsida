@@ -15,12 +15,12 @@ $stmt->bindParam(":password", $tmp_password);
 $stmt->execute();
 $users = $stmt->fetchAll();
 
-if(isset($_GET["error"])){
+if(isset($_POST["error"])){
     echo "<script>";
     include("adminreg_fel.js");
     echo "</script>";
 }
-if(isset($_GET["visaAdmin"])){
+if(isset($_POST["visaAdmin"])){
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
     $sql = "SELECT * FROM users WHERE admin=1";
     $stmt = $dbh->prepare($sql);
@@ -76,7 +76,7 @@ if(isset($_GET["visaAdmin"])){
                 </div>
                 <div class="user_admin article">
                     <h2>Användarhantering</h2>
-                    <form action="createAdmin.php" method="GET">
+                    <form action="createAdmin.php" method="POST">
                         <p>Användarnamn</p><input type="text" name="username" placeholder="Användarnamn" required>
                         <p>Lösenord</p><input type="password" name="password" placeholder="Lösenord" required>
                         <p>Upprepa lösenord</p><input type="password" name="password_repeat" placeholder="Upprepa lösenord" required>

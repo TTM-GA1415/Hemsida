@@ -6,10 +6,10 @@ define("DB_PASSWORD", "");
 define("DB_NAME", "ttm_db");
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
-if (isset($_GET["regAdmin"])) {
-    $tmpUN = filter_input(INPUT_GET, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-    $tmpPW = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-    $tmpPWR = filter_input(INPUT_GET, 'password_repeat', FILTER_SANITIZE_SPECIAL_CHARS);
+if (isset($_POST["regAdmin"])) {
+    $tmpUN = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpPW = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+    $tmpPWR = filter_input(INPUT_POST, 'password_repeat', FILTER_SANITIZE_SPECIAL_CHARS);
     $tmpAdmin = 1;
 
     if ($tmpPW == $tmpPWR) {

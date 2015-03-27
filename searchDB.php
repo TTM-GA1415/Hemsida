@@ -7,7 +7,7 @@ define("DB_PASSWORD", "");
 define("DB_NAME", "ttm_db");
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
-$tmpSök = filter_input(INPUT_GET, 'sök', FILTER_SANITIZE_SPECIAL_CHARS);
+$tmpSök = filter_input(INPUT_POST, 'sök', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $sql = "SELECT * FROM produktregister WHERE taggar LIKE '%" . $tmpSök . "%'";
 $stmt = $dbh->prepare($sql);
@@ -25,7 +25,7 @@ if (!empty($produkter)) {
 //        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
 //        $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
 //        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
-        $_SESSION["searchResults"] .= "<form method='GET' action='addToCart.php'>";
+        $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
         $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
         $_SESSION["searchResults"] .= "<input type='number' name='antal' value='1'>";
         $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' value='Lägg till i kundvagn'>";
