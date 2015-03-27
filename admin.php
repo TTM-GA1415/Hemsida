@@ -15,10 +15,8 @@ $stmt->bindParam(":password", $tmp_password);
 $stmt->execute();
 $users = $stmt->fetchAll();
 
-if(isset($_POST["error"])){
-    echo "<script>";
-    include("adminreg_fel.js");
-    echo "</script>";
+if(isset($_GET["error"])){
+    echo "<script>window.alert('Dina lösenord matchade inte.');</script>";
 }
 if(isset($_GET["visaAdmin"])){
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);

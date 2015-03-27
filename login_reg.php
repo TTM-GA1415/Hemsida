@@ -20,19 +20,15 @@ if (isset($_POST["user_reg"])) {
             $stmt->bindParam(":password", $tmp_password);
             $stmt->execute();
         } else {
-            echo "Lösenorden matchar inte!";
+            echo "<script>window.alert('Dina lösenord matchade inte.');</script>";
         }
     } else {
-        echo "Användarnamnet är upptaget!";
+        echo "<script>window.alert('Användarnamnet är upptaget.');</script>";
     }
 }
 include 'login.php';
 
-function kollaUN($username) {
-    define("DB_SERVER", "localhost");
-    define("DB_USER", "root");
-    define("DB_PASSWORD", "");
-    define("DB_NAME", "ttm_db"); 
+function kollaUN($username) { 
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
     $sql = "SELECT * FROM users WHERE anv_namn=:username";

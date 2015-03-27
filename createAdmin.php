@@ -22,7 +22,8 @@ if (isset($_POST["regAdmin"])) {
         header("Location:admin.php");
         exit();
     } else {
-        header("Location:admin.php?error");
+        header("location:admin.php?error");
+        exit();
     }
 } else {
     
