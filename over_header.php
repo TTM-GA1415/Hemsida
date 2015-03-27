@@ -26,8 +26,8 @@
     <body>
         
         <div id="over_header_wrapper">
-            <div id="telefonnummer"><p>Telefonnummer: 123456789</p></div>
-        <div id="cart"><a href="#"><img src="bilder/kundvagn/kundvagn_minskad.png"></a> </div>
+            <div id="telefonnummer"><p>Telefonnummer: 013-245678</p></div>
+        <div id="cart"><a href="kundvagn.php"><img src="bilder/kundvagn/kundvagn_minskad.png"></a> </div>
         
         
         <?php

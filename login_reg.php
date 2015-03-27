@@ -1,9 +1,9 @@
 <?php
-session_start();
 define("DB_SERVER", "localhost");
 define("DB_USER", "root");
 define("DB_PASSWORD", "");
 define("DB_NAME", "ttm_db");
+
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
 if (isset($_GET["user_reg"])) {
@@ -19,18 +19,20 @@ if (isset($_GET["user_reg"])) {
             $stmt->bindParam(":username", $tmp_username);
             $stmt->bindParam(":password", $tmp_password);
             $stmt->execute();
-            
-            
         } else {
             echo "Lösenorden matchar inte!";
         }
-    }else{
+    } else {
         echo "Användarnamnet är upptaget!";
     }
 }
 include 'login.php';
 
 function kollaUN($username) {
+    define("DB_SERVER", "localhost");
+    define("DB_USER", "root");
+    define("DB_PASSWORD", "");
+    define("DB_NAME", "ttm_db"); 
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
     $sql = "SELECT * FROM users WHERE anv_namn=:username";
@@ -52,18 +54,18 @@ function kollaUN($username) {
         <title>Logga in - Registrera</title>
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
-        
+
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        
+
         <link rel="stylesheet" href="user_reg.css">
     </head>
     <body>
-        <?php
-            include('header.html');
-            ?>
+<?php
+include('header.html');
+?>
         <div id="wrapper">
             <section>
                 <div class="user-ruta ur_ett">
@@ -86,9 +88,9 @@ function kollaUN($username) {
                     </form>
                 </div>
             </section>
-            <?php
-            include('footer.html');
-            ?>
+<?php
+include('footer.html');
+?>
         </div>
     </body>
 </html>
