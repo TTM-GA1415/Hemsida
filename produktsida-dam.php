@@ -8,33 +8,167 @@ define("DB_NAME", "ttm_db");
 $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
 
+if (!isset($_GET["view"])) {
+    $sql = "SELECT * FROM produktregister WHERE kön LIKE '%dam%'";
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(":search", $tmpSök);
+    $stmt->execute();
+    $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$sql = "SELECT * FROM produktregister WHERE kön LIKE '%dam%'";
-$stmt = $dbh->prepare($sql);
-$stmt->bindParam(":search", $tmpSök);
-$stmt->execute();
-$produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-if (!empty($produkter)) {
-    foreach ($produkter as $produkt) {
-        $_SESSION["searchResults"] .= "<div class='produkter'>";
-        $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
-        $_SESSION["searchResults"] .= "<h4>" . $produkt["namn"] . "</h4>";
-//        $produkt .= "<p>" . $produkt["kön"] . "</p>";
-        $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $produkt["pris"] . " :-</p>";
-        $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $produkt["beskrivning"] . "</p></div>";
-//        $produkt .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
-//        $produkt .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
-//        $produkt .= "<p>Färg: " . $produkt["färg"] . "</p>";
-        $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
-        $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
-        $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
-        $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
-        $_SESSION["searchResults"] .= "</form>";
-        $_SESSION["searchResults"] .= "</div>";
+    if (!empty($produkter)) {
+        foreach ($produkter as $produkt) {
+            $_SESSION["searchResults"] .= "<div class='produkter'>";
+            $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+            $_SESSION["searchResults"] .= "<h4>" . $produkt["namn"] . "</h4>";
+            $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $produkt["pris"] . " :-</p>";
+            $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $produkt["beskrivning"] . "</p></div>";
+            $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+            $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
+            $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+            $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+            $_SESSION["searchResults"] .= "</form>";
+            $_SESSION["searchResults"] .= "</div>";
+        }
+    } else {
+        $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
     }
-}else{
-    $_SESSION["searchResults"] .= "<p>Inga träffar.</p>";
+} else {
+    if ($_GET["produkt"] == "trojor") {
+        $products = getProducts("tröja");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+    if ($_GET["produkt"] == "jackor") {
+        $products = getProducts("jacka");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+    if ($_GET["produkt"] == "byxor") {
+        $products = getProducts("byxor");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+    if ($_GET["produkt"] == "skor") {
+        $products = getProducts("sko");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+    if ($_GET["produkt"] == "hats") {
+        $products = getProducts("hatt");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+    if ($_GET["produkt"] == "accessoarer") {
+        $products = getProducts("accessoar");
+
+        if (!empty($products)) {
+            foreach ($products as $product) {
+                $_SESSION["searchResults"] .= "<div class='produkter'>";
+                $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
+                $_SESSION["searchResults"] .= "<h4>" . $product["namn"] . "</h4>";
+                $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $product["pris"] . " :-</p>";
+                $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $product["beskrivning"] . "</p></div>";
+                $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
+                $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $product["id"] . "'>";
+                $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
+                $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
+                $_SESSION["searchResults"] .= "</form>";
+                $_SESSION["searchResults"] .= "</div>";
+            }
+        } else {
+            $_SESSION["searchResults"] .= "<p>Inga produkter.</p>";
+        }
+    }
+}
+
+function getProducts($productWord) {
+    $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
+    $sql = "SELECT * FROM produktregister WHERE taggar LIKE '%" . $productWord . "%' AND kön='dam'";
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $products;
+    
 }
 ?>
 <!DOCTYPE html>
@@ -55,8 +189,8 @@ if (!empty($produkter)) {
     </head>
     <body>
         <?php
-            include('over_header.php');
-            include('header.html');
+        include('over_header.php');
+        include('header.html');
         ?>
         <div id="wrapper">
             <section>
@@ -66,29 +200,29 @@ if (!empty($produkter)) {
                 <div class="kategorier-meny">
                     <h4>Dam</h4>
                     <ul class="kategorier-dam">
-                        <li><a href="?trojor">Tröjor</a></li>
-                        <li><a href="#">Jackor</a></li>
-                        <li><a href="#">Byxor</a></li>
-                        <li><a href="#">Skor</a></li>
-                        <li><a href="#">Mössor och Kepsar</a></li>
-                        <li><a href="#">Accessoarer</a></li>
+                        <li><a href="?produkt=trojor&view=true">Tröjor</a></li>
+                        <li><a href="?produkt=jackor&view=true">Jackor</a></li>
+                        <li><a href="?produkt=byxor&view=true">Byxor</a></li>
+                        <li><a href="?produkt=skor&view=true">Skor</a></li>
+                        <li><a href="?produkt=hats&view=true">Mössor och Kepsar</a></li>
+                        <li><a href="?produkt=accessoarer&view=true">Accessoarer</a></li>
                     </ul>
                 </div>
                 <div class="produktalternativ"> 
                     <!--det här är det som ska append:as ut-->
                     <?php
-                        echo $_SESSION["searchResults"];
+                    echo $_SESSION["searchResults"];
                     ?>
 
                     <!--<div class="produkter"><img src="http://placehold.it/200x180"></div>
                     <div class="produkter"><img src="http://placehold.it/200x180"></div>
                     <div class="produkter"><img src="http://placehold.it/200x180"></div>-->
-                 
+
                 </div>
             </section>
-        <?php
+            <?php
             include('footer.html');
-        ?>    
+            ?>    
         </div>
     </body>
 </html>
