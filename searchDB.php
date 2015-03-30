@@ -27,8 +27,8 @@ if (!empty($produkter)) {
 //        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
         $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
         $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
-        $_SESSION["searchResults"] .= "<input type='number' name='antal' value='1'>";
-        $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' value='Lägg till i kundvagn'>";
+        $_SESSION["searchResults"] .= "<input type='number' name='antal' class='antal' value='1'>";
+        $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
         $_SESSION["searchResults"] .= "</form>";
         $_SESSION["searchResults"] .= "</div>";
     }
