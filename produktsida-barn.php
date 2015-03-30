@@ -198,7 +198,7 @@ function getProducts($productWord) {
                     <img src="http://placehold.it/1080x150">
                 </div>
                 <div class="kategorier-meny">
-                    <h4>Dam</h4>
+                    <h4>Barn</h4>
                     <ul class="kategorier-barn">
                         <li><a href="?produkt=trojor&view=true">Tröjor</a></li>
                         <li><a href="?produkt=jackor&view=true">Jackor</a></li>
