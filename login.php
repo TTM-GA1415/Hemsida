@@ -14,7 +14,7 @@ if (isset($_POST["logga_ut"])) {
     exit();
 }
 
-if (!isset($_SESSION["inloggad"])) {
+if (!isset($_SESSION["inloggad"]) and $_POST["anv_namn"] != null and $_POST["pass"] != null) {
     if (isset($_POST["anv_namn"]) and isset($_POST["pass"])) {
         //Skapar temporära variabler för användarnamn och lösenord
         $tmp_username = filter_input(INPUT_POST, 'anv_namn', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -38,7 +38,7 @@ if (!isset($_SESSION["inloggad"])) {
                 $_SESSION["inloggad"]["admin"] = false;
             }
         } else {
-            echo "Wrong username or password!";
+            echo "<script>window.alert('Fel användarnamn eller lösenord!');</script>";
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
-echo "<form>";
-echo "<input type='text' name='skit'>";
-echo "<input type='text' name='annanskit'>";
-echo "<input type='submit' name='go'>";
-echo "</form>";
+$array = array(1,2,3,4,5,6,7);
 
-var_dump($_GET);
+array_splice($array, 0, 1);
+
+foreach($array as $part){
+    echo $part;
+}   
