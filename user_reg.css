@@ -6,24 +6,29 @@ section{
     overflow: auto;
     
     height: 300px;
-    width: 254px;
+    width: 320px;
     
-    margin-left: 190px;
+    margin-left: 140px;
     margin-top: 50px;
     
     float: left;
+    /*padding-left: 0px;*/
+    
+    /*outline: thin solid red;*/
 }
 h2{
     font-size: 25px;
+    margin-left: 45px;
     margin-bottom: 10px;
     font-family: 'Droid Serif', serif;
 }
 input{
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     margin-bottom: 5px;
 }
 .user_input{
     width: 250px;
+    margin-top: 5px;
 }
 .knapp{
     float:right;
@@ -31,4 +36,9 @@ input{
 p{
     font-family: 'Droid Serif', serif;
 }
- 
+.knapp{
+    margin-right: 5px;
+}
+form{
+    height: 21px;
+}
