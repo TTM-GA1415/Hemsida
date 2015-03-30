@@ -5,6 +5,19 @@ header{
     border-bottom: thin solid #C7C7C7;
     box-shadow: 0px 2px 5px #888888;
 }
+section{
+    overflow: hidden;
+}
+.banner-barn{
+    margin-bottom: 5px;
+}
+.produktalternativ{
+    width: 880px;
+    overflow-y: scroll;
+    height: 700px;
+    padding-bottom: 70px;
+    
+}
 .kategorier-meny{
     margin-top: 10px;
     border-right: thin solid grey;
@@ -27,6 +40,8 @@ header{
     font-family: 'Droid Serif', serif;
 }
 .produkter{
+    overflow: auto;
+    margin-left: 30px;
     outline: thin solid orange;
     width: 250px;
 }
@@ -39,7 +54,7 @@ header{
 }
 .produkter img{
     margin-left: 10%;
-    
+
 }
 .produkter .antal{
     float: right;
@@ -47,12 +62,12 @@ header{
     height: 24px;
     border: thin solid black;
     /*padding-left: -20px;*/
-    
+
 }
 .produkter .add{
     background-color: white;
     border: thin solid black;
-    position: absolute;
+    /*    position: absolute;*/
     margin-left: -155px;
     font-family: 'Droid Serif', serif;
 }
@@ -71,7 +86,4 @@ header{
     padding-left: 2px;
     font-weight: 500;
     line-height: 12px;
-}
-.banner-barn img{
-    margin-left: 8px;
 }

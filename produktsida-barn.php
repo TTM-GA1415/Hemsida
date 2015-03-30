@@ -183,7 +183,7 @@ function getProducts($productWord) {
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="produkter.css">
-        <link rel="stylesheet" href="produkter-barn.css">
+        <link rel="stylesheet" href="produkter-dam.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     </head>
@@ -194,7 +194,7 @@ function getProducts($productWord) {
         ?>
         <div id="wrapper">
             <section>
-                <div class="banner-barn">
+                <div class="banner">
                     <img src="http://placehold.it/1080x150">
                 </div>
                 <div class="kategorier-meny">

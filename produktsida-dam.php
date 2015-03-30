@@ -194,7 +194,7 @@ function getProducts($productWord) {
         ?>
         <div id="wrapper">
             <section>
-                <div class="banner-dam">
+                <div class="banner">
                     <img src="http://placehold.it/1080x150">
                 </div>
                 <div class="kategorier-meny">

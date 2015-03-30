@@ -7,9 +7,8 @@
         $loginForm .= "<input type='text' name='anv_namn' class='infoga username' placeholder='Username'>";
         $loginForm .= "<input type='password' name='pass' class='infoga password' placeholder='Password'>";
         $loginForm .= "<input type='submit' name='log_in' class='button-over-header' Value='Logga in'>";
-        $loginForm .= "<a href='login_reg.php'><input type='button' name='register' class='reg_btn button-over-header' Value='Registrera'></a>";
+        $loginForm .= "<a href='login_reg.php'><button type='button' class='reg_btn button-over-header'>Registrera</button></a>";
         $loginForm .= "</form>";
-        
     }else{
         $loginForm .= "<form action='login.php' method='POST'>";
         $loginForm .= "<input type='Submit' name='logga_ut' class='loggaut' Value='Logga ut'>";
