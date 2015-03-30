@@ -66,7 +66,7 @@ if (!empty($produkter)) {
                 <div class="kategorier-meny">
                     <h4>Dam</h4>
                     <ul class="kategorier-dam">
-                        <li><a href="#">Tröjor</a></li>
+                        <li><a href="?trojor">Tröjor</a></li>
                         <li><a href="#">Jackor</a></li>
                         <li><a href="#">Byxor</a></li>
                         <li><a href="#">Skor</a></li>
