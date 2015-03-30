@@ -22,7 +22,7 @@ session_start();
         ?>
         <div id="wrapper">
             
-            <section>
+            <section class="search">
                 <?php
                 if(isset($_SESSION["searchResults"])){
                     echo $_SESSION["searchResults"];

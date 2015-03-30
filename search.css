@@ -1,41 +1,61 @@
-.söktProdukt{
-    width: 355px;
-    height: 215px;
-    border-left: thin solid #C7C7C7;
-    border-right: thin solid #C7C7C7;
+header{
+    overflow: auto;
+    background-color: white;
+    height:80px;
     border-bottom: thin solid #C7C7C7;
-     border-top: thin solid #C7C7C7;
+    box-shadow: 0px 2px 5px #888888;
+}
+
+.produkter{
+    outline: thin solid lightgray;
+    width: 250px;
     float:left;
-    overflow:auto;
-    margin-left:8px;
-    margin-top: 8px;
-    padding-top: 2px;
+    margin-left:20px;
+    margin-bottom: 5px;
+}
+.produkter h4{
+    text-align: center;
+    font-family: 'Droid Serif', serif;
+}
+.produkter #p{
+    margin-left: 10%;
+}
+.produkter img{
+    margin-left: 10%;
+    margin-top:2px;
+    
+}
+.produkter .antal{
+    float: right;
+    width: 50px;
+    height: 24px;
+    border: thin solid black;
+    /*padding-left: -20px;*/
+    margin-top:2px;
+   
+    
+}
+.produkter .add{
+    background-color: white;
+    margin-top:2px;
+    border: thin solid black;
+/*    position: absolute;*/
+    margin-left: -155px;
+    font-family: 'Droid Serif', serif;
+}
+.produkter .add:hover{
+    border: thin solid red;
+}
+.beskrivning{
+    border: thin solid lightgrey;
+    height: 60px;
+    width: 205px;
+    margin-left: 10%;
+    overflow: auto;
+}
+.beskrivning p{
+    padding-top: 5px;
     padding-left: 2px;
-    
-    
+    font-weight: 500;
+    line-height: 12px;
 }
-.söktProdukt img{
-    float:left;
-   margin-bottom: 2px;        
-   
-}
-.söktProdukt p, h4{
-margin-right:5px;
-/*    margin-left: 5px;*/
-}
-#wrapper{
-/*    outline: 2px solid green;*/
-   
-    
-
-}
-#searchContent{
-    overflow:auto;
-    background-color:white;
-    width:1100px;
-    border-left: thin solid #C7C7C7;
-    border-right: thin solid #C7C7C7;
-    box-shadow: 0px 0px 5px #888888;
-    padding-top: 20px;
-}
-

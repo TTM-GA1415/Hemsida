@@ -17,17 +17,18 @@ $produkter = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (!empty($produkter)) {
     foreach ($produkter as $produkt) {
-        $_SESSION["searchResults"] .= "<div class='söktProdukt'>";
-        $_SESSION["searchResults"] .= "<img src='http://placehold.it/200x180'>";
+        $_SESSION["searchResults"] .= "<div class='produkter'>";
+        $_SESSION["searchResults"] .= "<img src='http://placehold.it/205x180'>";
         $_SESSION["searchResults"] .= "<h4>" . $produkt["namn"] . "</h4>";
-//        $_SESSION["searchResults"] .= "<p>" . $produkt["kön"] . "</p>";
-        $_SESSION["searchResults"] .= "<p>" . $produkt["pris"] . " :-</p>";
-//        $_SESSION["searchResults"] .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
-//        $_SESSION["searchResults"] .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
-//        $_SESSION["searchResults"] .= "<p>Färg: " . $produkt["färg"] . "</p>";
+//        $produkt .= "<p>" . $produkt["kön"] . "</p>";
+        $_SESSION["searchResults"] .= "<p id='p'> Pris: " . $produkt["pris"] . " :-</p>";
+        $_SESSION["searchResults"] .= "<div class='beskrivning'><p>" . $produkt["beskrivning"] . "</p></div>";
+//        $produkt .= "<p>Storlek</p>" . $produkt["storlek"] . "</p>";
+//        $produkt .= "<p>Beskrivning: <br>" . $produkt["beskrivning"] . "</p>";
+//        $produkt .= "<p>Färg: " . $produkt["färg"] . "</p>";
         $_SESSION["searchResults"] .= "<form method='POST' action='addToCart.php'>";
         $_SESSION["searchResults"] .= "<input type='hidden' name='id' value='" . $produkt["id"] . "'>";
-        $_SESSION["searchResults"] .= "<input type='number' name='antal' class='antal' value='1'>";
+        $_SESSION["searchResults"] .= "<input type='number' class='antal' name='antal' value='1'>";
         $_SESSION["searchResults"] .= "<input type='submit' name='addToCart' class='add' value='Lägg till i kundvagn'>";
         $_SESSION["searchResults"] .= "</form>";
         $_SESSION["searchResults"] .= "</div>";
