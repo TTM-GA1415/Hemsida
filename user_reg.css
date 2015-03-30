@@ -16,6 +16,7 @@ section{
 h2{
     font-size: 25px;
     margin-bottom: 10px;
+    font-family: 'Droid Serif', serif;
 }
 input{
     margin-top: 5px;
@@ -27,3 +28,7 @@ input{
 .knapp{
     float:right;
 }
+p{
+    font-family: 'Droid Serif', serif;
+}
+ 

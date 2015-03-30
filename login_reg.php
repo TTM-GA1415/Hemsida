@@ -28,7 +28,7 @@ if (isset($_POST["user_reg"])) {
 }
 include 'login.php';
 
-function kollaUN($username) { 
+function kollaUN($username) {
     $dbh = new PDO('mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER . ';charset=utf8', DB_USER, DB_PASSWORD);
 
     $sql = "SELECT * FROM users WHERE anv_namn=:username";
@@ -48,8 +48,8 @@ function kollaUN($username) {
     <head>
         <meta charset="UTF-8">
         <title>Logga in - Registrera</title>
-        <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="reset.css">
+
 
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,11 +57,13 @@ function kollaUN($username) {
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
         <link rel="stylesheet" href="user_reg.css">
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-<?php
-include('header.html');
-?>
+        <?php
+        include("over_header.php");
+        include('header.html');
+        ?>
         <div id="wrapper">
             <section>
                 <div class="user-ruta ur_ett">
@@ -84,9 +86,9 @@ include('header.html');
                     </form>
                 </div>
             </section>
-<?php
-include('footer.html');
-?>
+            <?php
+            include('footer.html');
+            ?>
         </div>
     </body>
 </html>

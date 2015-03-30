@@ -61,3 +61,8 @@ form{
     font-size: 11px;
     /*margin-top: -5px;*/
 }
+.reg_btn{
+    margin-left: 5px;
+    color: black;
+    font-family: 'Droid Serif', serif;
+}
