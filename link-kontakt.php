@@ -49,17 +49,17 @@ session_start();
                                 <div class="t-b-bild bild1">
                                     <img src="bilder/profil/martin-croped.jpg">
                                     <p><b>Martin Benno Klevbrand</b></p>
-                                    <p>Front-side</p>
+                                    <p>Front-end</p>
                                 </div>
                                 <div class="t-b-bild bild2">
                                     <img src="bilder/profil/truls.jpg">
                                     <p><b>Truls Warvsten</b></p>
-                                    <p>Back-side</p>
+                                    <p>Back-end</p>
                                 </div>
                                 <div class="t-b-bild bild3">
                                     <img src="bilder/profil/theodor.jpg">
                                     <p><b>Theodor Årnfelt</b></p>
-                                    <p>Front-side & design</p>
+                                    <p>Front-end & design</p>
                                 </div>
                             </div>
                         </div>
