@@ -67,21 +67,21 @@ session_start();
 
                 <div class="img-under">
                     <div class="img-under-class">
-                        <a href="#"><img class="img-under-specific" src="bilder/350x380/shirt.jpg"></a>
+                        <a href="produktsida-herr.php"><img class="img-under-specific" src="bilder/350x380/shirt.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Just nu!</h5></div>
                             <div class="homepage-p"><p>Extrapris på alla byxor</p></div>
                         </div>
                     </div>
                     <div class="img-under-class">
-                        <a href="#"><img class="img-under-specific" src="bilder/350x380/pants350.jpg"></a>
+                        <a href="produktsida-herr.php"><img class="img-under-specific" src="bilder/350x380/pants350.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Prisvärt</h5></div>
                             <div class="homepage-p"><p>Kolla in nya prudukter</p></div>
                         </div>
                     </div>
                     <div class="img-under-class">
-                        <a href="#"><img class="img-under-specific img-under-undan" src="bilder/350x380/shirt.jpg"></a>
+                        <a href="produktsida-herr.php"><img class="img-under-specific img-under-undan" src="bilder/350x380/shirt.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Nyligen anlänt</h5></div>
                             <div class="homepage-p"><p>Snygga tröjor för hela slanten</p></div>
