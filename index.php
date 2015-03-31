@@ -33,13 +33,13 @@ session_start();
                     <!-- Wrapper for slides -->
                     <div class="slider carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="bilder/1080x400/kläder-på-galgar.jpg" alt="...">
+                            <img src="bilder/1080x400/iDunno.jpg">
                             <div class="carousel-caption">
                                 Bild 1
                             </div>
                         </div>
                         <div class="item">
-                            <img src="bilder/1080x400/klader.jpg" alt="...">
+                            <img src="bilder/1080x400/iDunno2.jpg" alt="...">
                             <div class="carousel-caption">
                                 Bild 2
                             </div>
@@ -67,21 +67,21 @@ session_start();
 
                 <div class="img-under">
                     <div class="img-under-class">
-                        <a href="#"><img class="img-under-specific" src="bilder/350x380/201243170_62bdbe70-d074-4bd5-84cd-5bb2f993362b.jpg"></a>
+                        <a href="#"><img class="img-under-specific" src="bilder/350x380/shirt.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Just nu!</h5></div>
                             <div class="homepage-p"><p>Extrapris på alla byxor</p></div>
                         </div>
                     </div>
                     <div class="img-under-class">
-                        <a href="#"><img class="img-under-specific" src="bilder/350x380/loltröjan.jpg"></a>
+                        <a href="#"><img class="img-under-specific" src="bilder/350x380/pants350.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Prisvärt</h5></div>
                             <div class="homepage-p"><p>Kolla in nya prudukter</p></div>
                         </div>
                     </div>
                     <div class="img-under-class">
-                       <a href="#"><img class="img-under-specific img-under-undan" src="bilder/350x380/tröja-och-skjorta.jpg"></a>
+                        <a href="#"><img class="img-under-specific img-under-undan" src="bilder/350x380/shirt.jpg"></a>
                         <div class="hover-display">
                             <div class="homepage-h5"><h5>Nyligen anlänt</h5></div>
                             <div class="homepage-p"><p>Snygga tröjor för hela slanten</p></div>
