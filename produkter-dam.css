@@ -42,7 +42,7 @@ section{
 .produkter{
     overflow: auto;
     margin-left: 30px;
-    outline: thin solid orange;
+    outline: thin solid lightgrey;
     width: 250px;
 }
 .produkter h4{
@@ -75,7 +75,7 @@ section{
     border: thin solid red;
 }
 .beskrivning{
-    border: thin solid orange;
+    border: thin solid lightgrey;
     height: 60px;
     width: 205px;
     margin-left: 10%;
